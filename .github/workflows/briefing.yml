@@ -2,9 +2,9 @@ name: Briefing NQ quotidien
 
 on:
   schedule:
-    # 12:00 UTC, du lundi au vendredi (≈ 14h Paris l'été / 13h l'hiver).
-    # Ajuste l'heure pour qu'elle tombe AVANT ta session pre-market US.
-    - cron: "0 12 * * 1-5"
+    # Toutes les heures pendant la séance US (≈13h–22h Paris). En UTC.
+    # En dehors, LevelBrief réaffiche la même clôture → inutile de tourner.
+    - cron: "0 11-20 * * 1-5"
   workflow_dispatch:        # bouton "Run workflow" pour lancer à la main
 
 permissions:
