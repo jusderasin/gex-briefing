@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NQ Pre-Market Briefing — Dimanche 21 Juin 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800;900&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:#141a28; --navy2:#1a2233; --card:#1e2738; --cardline:#2c3850;
+    --ink:#1a2030; --paper:#eef1f5; --paper2:#ffffff;
+    --green:#2f7d56; --greenbg:#e7f2ec; --greenline:#bfe0cd;
+    --red:#b23a44; --redbg:#f6e6e7; --redline:#e3bcc0;
+    --amber:#c79320; --amberbg:#f6efdc;
+    --blue:#2d6cdf; --muted:#8a97ad; --mutedlight:#6b7689;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  body{background:#0c1018; font-family:'Inter',sans-serif; color:var(--ink); padding:24px 12px; -webkit-font-smoothing:antialiased;}
+  .deck{max-width:1180px; margin:0 auto; display:flex; flex-direction:column; gap:26px;}
+  .page{position:relative; border-radius:14px; overflow:hidden; padding:42px 46px; box-shadow:0 12px 40px rgba(0,0,0,.45);}
+  .page.dark{background:var(--navy); color:#e8edf5;}
+  .page.light{background:var(--paper); color:var(--ink);}
+  .ptag{position:absolute; right:14px; bottom:12px; font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:.5px; padding:4px 10px; border-radius:5px;}
+  .dark .ptag{background:#0c111c; color:#7e8aa0;}
+  .light .ptag{background:#cfd6e0; color:#5a6577;}
+  .eyebrow{font-family:'JetBrains Mono',monospace; font-size:12px; letter-spacing:3px; text-transform:uppercase; color:var(--muted); font-weight:500;}
+  .accent{height:3px; width:100%; background:linear-gradient(90deg,var(--red),#7a2730); border-radius:2px; margin:14px 0 26px;}
+  h2.title{font-family:'Inter',sans-serif; font-weight:700; font-size:23px; letter-spacing:1px; text-transform:uppercase;}
+  .dark h2.title{color:#eef2f8;}
+
+  .cover{min-height:430px; display:flex; flex-direction:column; justify-content:center;}
+  .statusbar{display:inline-block; font-family:'JetBrains Mono',monospace; font-size:13px; letter-spacing:1px; color:#9aa6bd; border:1px solid #2c3850; background:#161e2e; padding:12px 18px; border-radius:8px; margin-bottom:34px; align-self:flex-start;}
+  h1{font-family:'Playfair Display',serif; font-weight:900; font-size:74px; line-height:1; color:#fff; letter-spacing:-1px;}
+  .sub{font-family:'Inter',sans-serif; font-weight:400; font-size:29px; color:#9aa6bd; margin-top:20px;}
+  .coveraccent{height:2px; width:100%; background:linear-gradient(90deg,var(--red),transparent); margin:26px 0 30px;}
+  .badges{display:flex; gap:16px; flex-wrap:wrap;}
+  .badge{font-family:'Inter',sans-serif; font-weight:700; font-size:14px; letter-spacing:1px; padding:15px 26px; border-radius:9px; border:1px solid #2c3850; background:#1a2233; color:#c2cbdb;}
+  .badge.on{background:var(--green); border-color:var(--green); color:#fff;}
+  .badge.warn{background:var(--amber); border-color:var(--amber); color:#fff;}
+  .src{position:absolute; right:46px; bottom:46px; font-family:'JetBrains Mono',monospace; font-size:11px; color:#7e8aa0; border:1px solid #2c3850; background:#161e2e; padding:10px 14px; border-radius:7px; line-height:1.5; text-align:left;}
+
+  .two{display:grid; grid-template-columns:1fr 1fr; gap:26px;}
+  .col h3{font-family:'Playfair Display',serif; font-weight:800; font-size:26px; margin-bottom:4px;}
+  .thesis{font-family:'Playfair Display',serif; font-weight:800; font-size:30px; color:var(--green); margin:2px 0 18px;}
+  .callout{background:var(--green); color:#fff; border:2px solid #20603f; padding:18px 20px; border-radius:4px; font-weight:700; font-size:18px; line-height:1.35; letter-spacing:.3px;}
+  .mlabel{font-family:'JetBrains Mono',monospace; font-size:12px; letter-spacing:2px; color:var(--mutedlight); margin:22px 0 10px; text-transform:uppercase;}
+  .col p{font-size:15px; line-height:1.6; color:#3a4456;}
+  .ring{width:210px; height:210px; border-radius:50%; border:26px solid #a9c6b5; margin:6px auto 0; display:flex; align-items:center; justify-content:center;}
+  .ring span{font-weight:700; font-size:17px; color:#2a3346;}
+  .ringlbls{display:flex; justify-content:space-between; max-width:230px; margin:8px auto 0; font-size:12px; color:var(--mutedlight);}
+  .ivbox{background:var(--greenbg); border:1px solid var(--greenline); border-radius:7px; padding:14px 18px; font-weight:700; font-size:17px; color:#243049; margin-top:20px;}
+  .notebox{background:#eef2f7; border:1px solid #d7dfe9; border-radius:7px; padding:14px 18px; font-size:13.5px; line-height:1.55; color:#465062; margin-top:14px;}
+
+  .metrics{display:grid; grid-template-columns:repeat(4,1fr); gap:18px;}
+  .metric{background:var(--card); border:1px solid var(--cardline); border-radius:11px; padding:20px;}
+  .metric .ml{font-family:'JetBrains Mono',monospace; font-size:12px; letter-spacing:2px; color:#8a97ad; text-transform:uppercase;}
+  .metric .mv{font-family:'Playfair Display',serif; font-weight:800; font-size:46px; margin:6px 0 8px;}
+  .metric .md{font-size:13px; color:#9aa6bd;}
+  .mv.g{color:#4cba7e;} .mv.a{color:#d9a72c;} .mv.r{color:#cf5560;} .mv.n{color:#6b7689;}
+  .shift{margin:24px 0; background:#161e2e; border:1px solid #2c3850; border-radius:10px; padding:18px 22px;}
+  .shift .sh{font-family:'JetBrains Mono',monospace; font-size:13px; letter-spacing:1px;}
+  .shift .sh b{color:#4cba7e;}
+  .shift .sd{font-size:13.5px; color:#9aa6bd; margin-top:8px; line-height:1.5;}
+  .gilabel{font-family:'JetBrains Mono',monospace; font-size:12px; letter-spacing:2px; color:#8a97ad; text-transform:uppercase; margin-bottom:12px;}
+  .indices{display:grid; grid-template-columns:repeat(4,1fr); gap:14px;}
+  .idx{background:var(--card); border:1px dashed #3a475e; border-radius:10px; padding:18px; text-align:center;}
+  .idx .in{font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:1px; color:#8a97ad;}
+  .idx .iv{font-weight:700; font-size:20px; color:#8a97ad; margin-top:8px;}
+
+  .laddwrap{position:relative;}
+  .ladder{display:flex; flex-direction:column; gap:0; margin-top:6px;}
+  .rung{display:grid; grid-template-columns:120px 30px 1fr; align-items:center; gap:18px; padding:7px 0;}
+  .rung .lv{font-family:'JetBrains Mono',monospace; font-weight:700; font-size:22px; text-align:right;}
+  .rung .dot{width:18px; height:18px; border-radius:50%; justify-self:center; border:2px solid rgba(0,0,0,.15);}
+  .rung .ds{font-size:15px; color:#3a4456;}
+  .rung .ds b{color:#1a2030;}
+  .lv.green{color:var(--green);} .lv.amber{color:var(--amber);} .lv.blue{color:var(--blue);} .lv.grey{color:#6b7689;}
+  .dot.green{background:#3a9c68;} .dot.amber{background:#d4a017;} .dot.blue{background:#2d6cdf;} .dot.grey{background:#8a97ad;}
+  .zone{position:absolute; right:0; width:150px; border-radius:12px; padding:16px; font-size:13px; line-height:1.45; text-align:center; font-weight:600;}
+  .zone.up{top:6px; height:200px; background:var(--greenbg); border:1px solid var(--greenline); color:var(--green); display:flex; align-items:center; justify-content:center;}
+  .zone.down{bottom:6px; height:120px; background:var(--redbg); border:1px solid var(--redline); color:var(--red); display:flex; align-items:center; justify-content:center;}
+
+  .dgrid{display:grid; grid-template-columns:1fr 1fr; gap:26px;}
+  .dcard{border-radius:10px; overflow:hidden; border:1px solid var(--cardline);}
+  .dcard .dh{padding:12px 18px; font-weight:700; font-size:14px; letter-spacing:.5px; color:#fff;}
+  .dh.green{background:var(--green);} .dh.red{background:var(--red);}
+  .dcard .db{padding:18px; background:var(--card); font-size:14px; line-height:1.55; color:#c2cbdb;}
+  .dbig{font-family:'Playfair Display',serif; font-weight:800; font-size:34px; margin-bottom:6px;}
+  .dbig.g{color:#4cba7e;} .dbig.r{color:#cf5560;}
+  .dsmall{font-size:12px; color:#8a97ad; font-weight:600;}
+  .exptitle{font-family:'JetBrains Mono',monospace; font-size:12px; letter-spacing:2px; color:#8a97ad; text-transform:uppercase; margin:6px 0 14px;}
+  .exprow{display:grid; grid-template-columns:130px 1fr 70px; align-items:center; gap:14px; margin-bottom:14px;}
+  .exprow .en{font-weight:700; font-size:14px; color:#c2cbdb;}
+  .exprow .en small{display:block; font-weight:400; font-size:11px; color:#7e8aa0; font-family:'JetBrains Mono',monospace;}
+  .bar{height:22px; background:#161e2e; border-radius:5px; position:relative; overflow:hidden;}
+  .bar i{position:absolute; left:50%; top:0; bottom:0; background:linear-gradient(90deg,#2f7d56,#4cba7e); border-radius:0 5px 5px 0;}
+  .exprow .ev{font-family:'JetBrains Mono',monospace; font-weight:700; font-size:14px; color:#4cba7e; text-align:right;}
+  .keyline{margin-top:20px; background:#161e2e; border:1px solid #2c3850; border-radius:9px; padding:14px 18px; font-size:13.5px; line-height:1.5; color:#c2cbdb;}
+  .keyline b{color:#d9a72c;}
+
+  /* Alerte expiration spéciale */
+  .expiry-alert{background:#2a1e0e; border:1px solid #d4a017; border-radius:10px; padding:18px 22px; margin-bottom:18px;}
+  .expiry-alert .ea-label{font-family:'JetBrains Mono',monospace; font-size:12px; letter-spacing:2px; color:#d9a72c; text-transform:uppercase; margin-bottom:8px;}
+  .expiry-alert .ea-text{font-size:14px; color:#e8d5a0; line-height:1.55;}
+
+  table{width:100%; border-collapse:separate; border-spacing:0 0; margin-top:6px;}
+  th{background:#2a3346; color:#cfd6e2; font-size:12px; letter-spacing:1px; text-transform:uppercase; text-align:left; padding:14px 16px; font-weight:700;}
+  th:first-child{border-radius:7px 0 0 0;} th:last-child{border-radius:0 7px 0 0;}
+  td{padding:18px 16px; font-size:14px; line-height:1.5; vertical-align:top; border-bottom:6px solid #eef1f5;}
+  .scn{font-family:'Playfair Display',serif; font-weight:800; font-size:22px;}
+  .rowg td{background:var(--greenbg);} .rowg .scn{color:var(--green);}
+  .rown td{background:#eef0f3;} .rown .scn{color:var(--amber);}
+  .rowr td{background:var(--redbg);} .rowr .scn{color:var(--red);}
+  .skip{margin-top:18px; background:#fbf6df; border:1px solid #e7d9a0; border-radius:8px; padding:15px 18px; font-size:14px; color:#6e5d1f; line-height:1.5;}
+  .skip b{color:#564818;}
+  .disclaimer{max-width:1180px; margin:8px auto 0; font-size:11.5px; color:#5b6576; line-height:1.5; padding:0 12px; text-align:center;}
+
+  @media(max-width:820px){
+    .page{padding:30px 22px;}
+    h1{font-size:46px;} .sub{font-size:20px;}
+    .two,.dgrid{grid-template-columns:1fr;}
+    .metrics{grid-template-columns:repeat(2,1fr);}
+    .indices{grid-template-columns:repeat(2,1fr);}
+    .src{position:static; margin-top:24px; display:inline-block;}
+    .zone{position:static; width:auto; height:auto !important; margin:14px 0; display:block !important;}
+    .rung{grid-template-columns:90px 24px 1fr; gap:10px;}
+    .rung .lv{font-size:18px;}
+    .exprow{grid-template-columns:110px 1fr 60px;}
+    table,thead,tbody,th,td,tr{display:block;}
+    th{display:none;}
+    td{border-bottom:1px solid #dfe4ec;}
+    .scn{font-size:20px;}
+  }
+</style>
+
+<style id="print-rules">
+@media print {
+  body { background:#fff !important; padding:0 !important; }
+  .deck { gap:0 !important; }
+  .page { page-break-after: always; box-shadow:none !important; border-radius:0 !important; }
+  .disclaimer { page-break-before: avoid; }
+}
+</style>
+
+</head>
+<body>
+<div class="deck">
+
+  <!-- PAGE 1 -->
+  <section class="page dark cover">
+    <div class="statusbar">STATUS: PRE-MARKET&nbsp;&nbsp;//&nbsp;&nbsp;TICKER: NQ&nbsp;&nbsp;//&nbsp;&nbsp;DATE: 21 JUN 2026</div>
+    <h1>NQ Pre-Market Briefing</h1>
+    <div class="sub">Knife-edge Regime — Pivot 30,400 · Volatilité Potentielle</div>
+    <div class="coveraccent"></div>
+    <div class="badges">
+      <span class="badge warn">KNIFE-EDGE REGIME</span>
+      <span class="badge">VOLATILITÉ POTENTIELLE</span>
+      <span class="badge">GAMMA NEUTRE</span>
+      <span class="badge">FLUX BAISSIER</span>
+    </div>
+    <div class="src">DATA SOURCE: LEVELBRIEF (NDX) //<br>MAJ DIMANCHE 21/06 08:00 GMT</div>
+    <div class="ptag">Page 1 / 6</div>
+  </section>
+
+  <!-- PAGE 2 -->
+  <section class="page light">
+    <div class="two">
+      <div class="col">
+        <div class="eyebrow">The Bottom Line</div>
+        <h3>CORE THESIS&nbsp;:</h3>
+        <div class="thesis" style="color:var(--amber);">VOLATILITÉ / AMPLIFICATION</div>
+        <div class="callout" style="background:var(--amber); border-color:#a0751a;">ATTENTION : RÉGIME "KNIFE-EDGE".<br>MOUVEMENTS AMPLIFIÉS SOUS 30,400.</div>
+        <div class="mlabel">Microstructure</div>
+        <p>NQ traite à <b>30,406.19</b> (NDX), juste <b>au-dessus du Gamma Flip à 30,400</b>. Le régime "Knife-edge" indique une transition de hedging des dealers. Au-dessus du flip, les dealers amortissent les mouvements ; en dessous, ils les amplifient. Gamma net à +4.36 Md$. Le marché est en équilibre précaire. Le Call Wall à 30,325 est un support immédiat, tandis que le Put Wall à 30,000 est un support majeur. Pas de flux frais significatif pour l'instant.</p>
+      </div>
+      <div class="col">
+        <div class="eyebrow">The Risk Engine</div>
+        <div class="ring" style="border-color:#e0c98e;"><span>Breakout Risk</span></div>
+        <div class="ringlbls"><span>Range-Bound</span><span>Breakout</span></div>
+        <div class="ivbox" style="background:var(--amberbg); border-color:var(--amber);">IV30&nbsp; 22.86% &nbsp;→&nbsp; vol modérée (potentiel de hausse)</div>
+        <div class="notebox">Skew IV +5.15% côté puts : la demande de protection est présente et légèrement plus élevée qu'en environnement calme. Net GEX à +4.36 Md$ : le gamma positif est significatif, mais la position du spot sur le gamma flip rend le régime instable. Le "Knife-edge regime" suggère que la direction initiale du mouvement sera amplifiée.</div>
+      </div>
+    </div>
+    <div class="ptag">Page 2 / 6</div>
+  </section>
+
+  <!-- PAGE 3 -->
+  <section class="page dark">
+    <h2 class="title">Conviction Matrix &amp; Risk Tone</h2>
+    <div class="accent"></div>
+    <div class="metrics">
+      <div class="metric"><div class="ml">Momentum</div><div class="mv n">1/5</div><div class="md">Pas de flux frais directionnel</div></div>
+      <div class="metric"><div class="ml">Options</div><div class="mv a">3/5</div><div class="md">Gamma+ élevé, skew put modéré</div></div>
+      <div class="metric"><div class="ml">Volatility</div><div class="mv a">3/5</div><div class="md">IV 22.86% – modérée</div></div>
+      <div class="metric"><div class="ml">Regime Risk</div><div class="mv r">4/5</div><div class="md">Knife-edge regime – amplification</div></div>
+    </div>
+    <div class="shift">
+      <div class="sh">GEX SHIFT : <b>+4.36 Md$ / 1%</b> &nbsp;→&nbsp; gamma positif élevé · régime "Knife-edge"</div>
+      <div class="sd">Le spot est sur le gamma flip à 30,400. Cela signifie que les dealers sont en transition de hedging. Au-dessus de 30,400, ils amortissent les mouvements de prix. En dessous, ils les amplifient. La bande de couverture est large (30,200–31,400). Le Call Wall à 30,325 est un support immédiat, tandis que le Put Wall à 30,000 est un support majeur. Le Max Pain est à 29,700.</div>
+    </div>
+    <div class="gilabel">Indices Globaux (à actualiser lundi avant ouverture)</div>
+    <div class="indices">
+      <div class="idx"><div class="in">NIKKEI</div><div class="iv">— · —</div></div>
+      <div class="idx"><div class="in">DAX</div><div class="iv">— · —</div></div>
+      <div class="idx"><div class="in">FTSE</div><div class="iv">— · —</div></div>
+      <div class="idx"><div class="in">EURO STOXX 50</div><div class="iv">— · —</div></div>
+    </div>
+    <div class="ptag">Page 3 / 6</div>
+  </section>
+
+  <!-- PAGE 4 -->
+  <section class="page light">
+    <h2 class="title" style="color:#1a2030">The Gamma Landscape &amp; Key Levels</h2>
+    <div class="accent"></div>
+    <div class="laddwrap">
+      <div class="ladder">
+        <div class="rung"><div class="lv green">31,400</div><div class="dot green"></div><div class="ds"><b>Hedging Band HI</b> — Borne haute de la bande de couverture</div></div>
+        <div class="rung"><div class="lv grey">31,000</div><div class="dot grey"></div><div class="ds">Strike GEX (+0.36B) — Résistance intermédiaire</div></div>
+        <div class="rung"><div class="lv grey">30,690</div><div class="dot grey"></div><div class="ds">Strike GEX (+0.16B) — Résistance mineure</div></div>
+        <div class="rung"><div class="lv grey">30,600</div><div class="dot grey"></div><div class="ds">Strike GEX (+0.12B) — Résistance mineure</div></div>
+        <div class="rung"><div class="lv grey">30,500</div><div class="dot grey"></div><div class="ds">Strike GEX (+0.30B) — Résistance</div></div>
+        <div class="rung"><div class="lv blue">30,406.19</div><div class="dot blue"></div><div class="ds"><b>SPOT</b> — Référence (clôture vendredi)</div></div>
+        <div class="rung"><div class="lv amber">30,400</div><div class="dot amber"></div><div class="ds"><b>GAMMA FLIP</b> — Pivot crucial, transition de hedging</div></div>
+        <div class="rung"><div class="lv green">30,325</div><div class="dot green"></div><div class="ds"><b>Call Wall (OI 3409)</b> — Support immédiat</div></div>
+        <div class="rung"><div class="lv green">30,200</div><div class="dot green"></div><div class="ds"><b>Hedging Band LO</b> — Borne basse de la bande de couverture</div></div>
+        <div class="rung"><div class="lv green">30,000</div><div class="dot green"></div><div class="ds"><b>Put Wall (OI 1752)</b> — Support majeur</div></div>
+        <div class="rung"><div class="lv grey">29,700</div><div class="dot grey"></div><div class="ds"><b>Max Pain</b> — Point d'équilibre des options</div>
+      </div>
+      <div class="zone up" style="height:280px;">Zone de dampening<br>(au-dessus du Gamma Flip)</div>
+      <div class="zone down" style="height:200px; background:var(--redbg); border:1px solid var(--redline); color:var(--red);">Zone d'amplification<br>(sous le Gamma Flip)</div>
+    </div>
+    <div class="ptag">Page 4 / 6</div>
+  </section>
+
+  <!-- PAGE 5 -->
+  <section class="page dark">
+    <h2 class="title">Dealer Intent &amp; GEX by Expiry</h2>
+    <div class="accent"></div>
+
+    <div class="expiry-alert">
+      <div class="ea-label">⚠ Régime "Knife-edge"</div>
+      <div class="ea-text">Le spot est sur le Gamma Flip à 30,400. Cela signifie que les dealers sont en transition de hedging. Les mouvements de prix seront <b>amorties au-dessus de 30,400</b> et <b>amplifiés en dessous de 30,400</b>. Une cassure nette du Gamma Flip pourrait entraîner une accélération dans la direction de la cassure.</div>
+    </div>
+
+    <div class="dgrid">
+      <div>
+        <div class="exptitle">Carte d'action des dealers (prochain ±1%)</div>
+        <div class="dcard" style="margin-bottom:18px;">
+          <div class="dh green">PRIX MONTE&nbsp;→&nbsp;+1%</div>
+          <div class="db"><div class="dbig g">0.00 Md$</div><div class="dsmall">DEALERS VENDENT</div><p style="margin-top:10px;">Aucun frein mécanique à la hausse. Si le prix reste au-dessus du Gamma Flip, les dealers amortiront les mouvements, favorisant un range. Le Call Wall à 30,325 pourrait servir de support en cas de repli.</p></div>
+        </div>
+        <div class="dcard">
+          <div class="dh red">PRIX BAISSE&nbsp;→&nbsp;−1%</div>
+          <div class="db"><div class="dbig r">4.36 Md$</div><div class="dsmall">DEALERS ACHÈTENT</div><p style="margin-top:10px;">Un coussin significatif à la baisse. Cependant, si le prix casse le Gamma Flip à 30,400 et reste en dessous, les dealers amplifieront les mouvements, rendant les baisses plus rapides. Le Put Wall à 30,000 est un support clé.</p></div>
+        </div>
+      </div>
+      <div>
+        <div class="exptitle">GEX par expiration</div>
+        <div class="exprow"><div class="en">Hebdomadaire<small>WEEKLY</small></div><div class="bar"><i style="width:34.6%"></i></div><div class="ev">+1.51B</div></div>
+        <div class="exprow"><div class="en">Mensuel<small>MONTHLY</small></div><div class="bar"><i style="width:43.8%"></i></div><div class="ev">+1.91B</div></div>
+        <div class="exprow"><div class="en">Trimestriel<small>QUARTERLY</small></div><div class="bar"><i style="width:5.0%"></i></div><div class="ev">+0.22B</div></div>
+        <div class="exprow"><div class="en">LEAPS<small>LEAPS</small></div><div class="bar"><i style="width:16.5%"></i></div><div class="ev">+0.72B</div></div>
+        <div class="keyline">CLÉ : Le GEX mensuel est le plus important, suivi de près par le GEX hebdomadaire. Le régime "Knife-edge" autour de <b>30,400</b> est le facteur dominant. Les dealers n'offrent pas de frein à la hausse, mais un coussin important à la baisse. La volatilité pourrait être amplifiée si le spot passe sous le Gamma Flip.</div>
+      </div>
+    </div>
+    <div class="ptag">Page 5 / 6</div>
+  </section>
+
+  <!-- PAGE 6 -->
+  <section class="page light">
+    <h2 class="title" style="color:#1a2030">The Scenario Execution Matrix</h2>
+    <div class="accent"></div>
+    <table>
+      <thead>
+        <tr><th style="width:14%">Scénario</th><th style="width:24%">Déclencheur</th><th style="width:28%">Triggers Price Action</th><th style="width:18%">Zones Cibles</th><th style="width:16%">Posture</th></tr>
+      </thead>
+      <tbody>
+        <tr class="rowg">
+          <td><span class="scn">HAUSSIER</span></td>
+          <td>Le spot tient au-dessus de 30,400 (Gamma Flip). Les dealers amortissent la hausse.</td>
+          <td>Rebond net sur 30,400 ou 30,325 (Call Wall). Reclaim EMA/VWAP + retest qui tient.</td>
+          <td>30,500 → 31,000, ext. 31,400.</td>
+          <td>Acheter les replis au-dessus du Gamma Flip. Attendre la confirmation du maintien.</td>
+        </tr>
+        <tr class="rown">
+          <td><span class="scn">RANGE</span></td>
+          <td>Le spot oscille autour de 30,400 sans cassure nette. Dampening actif au-dessus, amplification sous le flip.</td>
+          <td>Rotation 30,325 – 30,500. Rejets nets aux bords. Volume modéré.</td>
+          <td>Canal 30,325 – 30,500.</td>
+          <td>Fade les bords. Milieu = attendre. Régime "Knife-edge" rend le range instable.</td>
+        </tr>
+        <tr class="rowr">
+          <td><span class="scn">BAISSIER</span></td>
+          <td>Cassure nette de 30,400 (clôture + volume). Bascule en régime d'amplification.</td>
+          <td>Échec sous le Gamma Flip, momentum vendeur. Échec de reclaim 30,400. Pas de fade.</td>
+          <td>30,325 → 30,200, puis 30,000 (Put Wall).</td>
+          <td>Suivre le momentum. Ne pas acheter le couteau. Réévaluer sur 30,000.</td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="skip"><b>SKIP LUNDI SI&nbsp;:</b> gap d'ouverture sous 30,000 OU au-dessus de 31,000 dans les 30 premières minutes — niveaux temporairement non fiables, attendre un nouvel équilibre. Le <b>régime "Knife-edge"</b> exige une vigilance accrue autour du Gamma Flip à 30,400. Rafraîchir LevelBrief avant l'ouverture pour confirmer les niveaux mis à jour.</div>
+    <div class="ptag">Page 6 / 6</div>
+  </section>
+
+</div>
+<div class="disclaimer">Recréé à partir des niveaux LevelBrief estimés au dimanche 21 juin 2026 · niveaux NDX (ajouter le basis NQ) · données CBOE différées ~15 min · à des fins éducatives uniquement, ceci n'est pas un conseil en investissement · le rafraîchissement de lundi matin prime sur ce document.</div>
+</body>
+</html>
