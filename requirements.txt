@@ -1,0 +1,2 @@
+google-genai>=1.0
+playwright>=1.45

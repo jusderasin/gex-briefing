@@ -1,0 +1,43 @@
+name: Briefing NQ quotidien
+
+on:
+  schedule:
+    # 12:00 UTC, du lundi au vendredi (≈ 14h Paris l'été / 13h l'hiver).
+    # Ajuste l'heure pour qu'elle tombe AVANT ta session pre-market US.
+    - cron: "0 12 * * 1-5"
+  workflow_dispatch:        # bouton "Run workflow" pour lancer à la main
+
+permissions:
+  contents: write           # nécessaire pour committer le briefing
+
+jobs:
+  briefing:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install deps
+        run: |
+          pip install -r requirements.txt
+          python -m playwright install --with-deps chromium
+
+      - name: Generate briefing
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          # Optionnels (déjà réglés par défaut dans run.py) :
+          # LEVELBRIEF_URL: ${{ secrets.LEVELBRIEF_URL }}
+          # LEVELBRIEF_TICKER: NDX
+          # GEMINI_MODEL: gemini-2.5-flash-lite
+        run: python run.py
+
+      - name: Commit briefing
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add briefings/
+          git commit -m "Briefing NQ $(date +%F)" || echo "Rien à committer"
+          git push
