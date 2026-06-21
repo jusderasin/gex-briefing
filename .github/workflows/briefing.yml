@@ -38,6 +38,6 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add briefings/
+          git add briefings/ index.html
           git commit -m "Briefing NQ $(date +%F)" || echo "Rien à committer"
           git push

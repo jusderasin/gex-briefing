@@ -336,6 +336,10 @@ def main() -> None:
     html_path.write_text(html, encoding="utf-8")
     print(f"[run] HTML écrit : {html_path}")
 
+    # index.html à la racine = dernier briefing (c'est ce que GitHub Pages affichera)
+    (ROOT / "index.html").write_text(html, encoding="utf-8")
+    print("[run] index.html (dernier briefing) mis à jour pour le site")
+
     try:
         to_pdf(html_path, pdf_path)
         print(f"[run] PDF écrit  : {pdf_path}")
