@@ -76,8 +76,8 @@
   .rung .dot{width:18px; height:18px; border-radius:50%; justify-self:center; border:2px solid rgba(0,0,0,.15);}
   .rung .ds{font-size:15px; color:#3a4456;}
   .rung .ds b{color:#1a2030;}
-  .lv.green{color:var(--green);} .lv.amber{color:var(--amber);} .lv.blue{color:var(--blue);} .lv.grey{color:#6b7689;}
-  .dot.green{background:#3a9c68;} .dot.amber{background:#d4a017;} .dot.blue{background:#2d6cdf;} .dot.grey{background:#8a97ad;}
+  .lv.green{color:var(--green);} .lv.amber{color:var(--amber);} .lv.blue{color:var(--blue);} .lv.grey{color:#6b7689;} .lv.red{color:var(--red);}
+  .dot.green{background:#3a9c68;} .dot.amber{background:#d4a017;} .dot.blue{background:#2d6cdf;} .dot.grey{background:#8a97ad;} .dot.red{background:var(--red);}
   .zone{position:absolute; right:0; width:150px; border-radius:12px; padding:16px; font-size:13px; line-height:1.45; text-align:center; font-weight:600;}
   .zone.up{top:6px; height:200px; background:var(--greenbg); border:1px solid var(--greenline); color:var(--green); display:flex; align-items:center; justify-content:center;}
   .zone.down{bottom:6px; height:120px; background:var(--redbg); border:1px solid var(--redline); color:var(--red); display:flex; align-items:center; justify-content:center;}
@@ -150,23 +150,15 @@
 
   <!-- PAGE 1 -->
   <section class="page dark cover">
-    <div class="statusbar">STATUS: PRE-MARKET&nbsp;&nbsp;//&nbsp;&nbsp;TICKER: NQ&nbsp;&nbsp;//&nbsp;&nbsp;DATE: 2 JUL 2026</div>
+    <div class="statusbar">STATUS: PRE-MARKET&nbsp;&nbsp;//&nbsp;&nbsp;TICKER: NQ&nbsp;&nbsp;//&nbsp;&nbsp;DATE: 2 JUIL 2026</div>
     <h1>NQ Pre-Market Briefing</h1>
-    <div class="sub">
-      <!-- Thèse basée sur le régime et la position du spot vs gamma_flip/walls -->
-      <!-- Si régime est null, on met une thèse neutre -->
-      <!-- Si spot est null, on met une thèse neutre -->
-      <!-- Si gamma_flip est null, on met une thèse neutre -->
-      <!-- Sinon, on déduit -->
-      <!-- Pour ce briefing, toutes les données sont null, donc on met une thèse neutre -->
-      Régime Indéterminé — Pivot Indéfini
-    </div>
+    <div class="sub">Régime de Gamma Négatif &amp; Amplification — Pivot 29,440</div>
     <div class="coveraccent"></div>
     <div class="badges">
-      <!-- Badges basés sur le régime -->
-      <!-- Si régime est null, on met des badges neutres -->
-      <span class="badge">RÉGIME INDÉTERMINÉ</span>
-      <span class="badge">DONNÉES INCOMPLÈTES</span>
+      <span class="badge warn">GAMMA NÉGATIF</span>
+      <span class="badge">AMPLIFICATION</span>
+      <span class="badge">FLUX BAISSIER</span>
+      <span class="badge">VOLATILITÉ ÉLEVÉE</span>
     </div>
     <div class="src">DATA SOURCE: LEVELBRIEF (NDX) //<br>MAJ MERCREDI 01/07 18:30 GMT</div>
     <div class="ptag">Page 1 / 6</div>
@@ -178,17 +170,17 @@
       <div class="col">
         <div class="eyebrow">The Bottom Line</div>
         <h3>CORE THESIS&nbsp;:</h3>
-        <div class="thesis">RÉGIME INDÉTERMINÉ</div>
-        <div class="callout">ATTENDRE DES DONNÉES COMPLÈTES POUR UNE THÈSE CLAIRE.</div>
+        <div class="thesis" style="color:var(--red);">RANGE BAISSIER / AMPLIFICATION</div>
+        <div class="callout" style="background:var(--red); border-color:#8a2a32;">SHORTS FAVORISÉS SOUS 29,440.<br>LONGS SI RECLAIM NET DU PIVOT + VOLUME.</div>
         <div class="mlabel">Microstructure</div>
-        <p>Les données de microstructure sont en cours de chargement. Le régime de marché, les niveaux clés de gamma et les flux frais ne sont pas encore disponibles. Il est essentiel d'attendre la mise à jour des données pour établir une thèse de trading fiable. La lecture du positionnement des dealers est en cours de chargement.</p>
+        <p>NQ traite autour de 29,171.1 (NDX), soit <b>-268.9 pts sous le pivot à 29,440</b> — le régime d'amplification est confirmé. Gamma net -0.92 Md$ : les dealers sont short gamma, ce qui signifie qu'ils achètent les hausses et vendent les baisses, amplifiant les mouvements. Le flux frais montre un intérêt marqué sur les puts autour de 29,230 et 29,100. Les dealers sont vendeurs de gamma, ce qui peut entraîner une expansion de la volatilité.</p>
       </div>
       <div class="col">
         <div class="eyebrow">The Risk Engine</div>
-        <div class="ring"><span>—</span></div>
+        <div class="ring" style="border-color:#e3bcc0;"><span>Trend Risk</span></div>
         <div class="ringlbls"><span>Range-Bound</span><span>Breakout</span></div>
-        <div class="ivbox">IV30&nbsp; — &nbsp;→&nbsp; vol indéterminée</div>
-        <div class="notebox">Les indicateurs de risque (IV30, Skew IV, Net GEX) ne sont pas disponibles. Il est impossible d'évaluer le risque de range ou de breakout sans ces informations. La prudence est de mise en l'absence de données claires sur la volatilité et le positionnement des options.</div>
+        <div class="ivbox" style="background:var(--redbg); border-color:var(--redline); color:#6e2a30;">IV30&nbsp; 25,72% &nbsp;→&nbsp; vol élevée (environnement volatil)</div>
+        <div class="notebox" style="background:#f6e6e7; border-color:#e3bcc0; color:#6e2a30;">Skew IV +4,69% côté puts : forte demande de protection à la baisse. Indique une inquiétude persistante du marché. Net GEX en territoire négatif (-0.92 Md$) : l'amplification est le régime dominant. Le marché est vulnérable aux mouvements directionnels. Les zones de forced-flow sont 28,000 (Put Wall) et 30,325 (Call Wall) — le hedging des dealers s'intensifiera vers le côté qui cède en premier.</div>
       </div>
     </div>
     <div class="ptag">Page 2 / 6</div>
@@ -199,14 +191,14 @@
     <h2 class="title">Conviction Matrix &amp; Risk Tone</h2>
     <div class="accent"></div>
     <div class="metrics">
-      <div class="metric"><div class="ml">Momentum</div><div class="mv n">—</div><div class="md">Données indisponibles</div></div>
-      <div class="metric"><div class="ml">Options</div><div class="mv n">—</div><div class="md">Données indisponibles</div></div>
-      <div class="metric"><div class="ml">Volatility</div><div class="mv n">—</div><div class="md">Données indisponibles</div></div>
-      <div class="metric"><div class="ml">Expiry Risk</div><div class="mv n">—</div><div class="md">Données indisponibles</div></div>
+      <div class="metric"><div class="ml">Momentum</div><div class="mv r">4/5</div><div class="md">Flux frais baissier 29,230–29,100</div></div>
+      <div class="metric"><div class="ml">Options</div><div class="mv r">4/5</div><div class="md">Gamma- en baisse, skew put élevé</div></div>
+      <div class="metric"><div class="ml">Volatility</div><div class="mv r">4/5</div><div class="md">IV 25,72% – élevée</div></div>
+      <div class="metric"><div class="ml">Expiry Risk</div><div class="mv n">1/5</div><div class="md">Pas d'expiry majeure cette semaine</div></div>
     </div>
     <div class="shift">
-      <div class="sh">GEX SHIFT : <b>— Md$ / 1%</b> &nbsp;(— vs — lundi) &nbsp;→&nbsp; régime indéterminé</div>
-      <div class="sd">Les informations sur le GEX Shift, le pivot et les bandes de couverture ne sont pas disponibles. Le flux frais et les niveaux d'expiration ne peuvent pas être évalués. Il est crucial d'attendre la mise à jour des données pour toute analyse.</div>
+      <div class="sh">GEX SHIFT : <b>-0,92 Md$ / 1%</b> &nbsp;(↓ vs précédent) &nbsp;→&nbsp; short gamma renforcé · amplification</div>
+      <div class="sd">Le spot est bien en dessous du pivot à 29,440, confirmant le régime d'amplification. La bande de couverture des dealers est large (28,800–30,325). Le flux frais se concentre sur les puts autour de 29,230 et 29,100, indiquant une pression baissière. Le marché est plus sensible aux mouvements directionnels, avec une volatilité potentiellement accrue. Une cassure du Put Wall à 28,000 ou du Call Wall à 30,325 pourrait déclencher des mouvements amplifiés.</div>
     </div>
     <div class="gilabel">Indices Globaux (à actualiser jeudi avant ouverture)</div>
     <div class="indices">
@@ -224,31 +216,19 @@
     <div class="accent"></div>
     <div class="laddwrap">
       <div class="ladder">
-        <!-- Ladder trié par prix décroissant, avec les données verrouillées -->
-        <!-- Si une donnée est null, on met "—" -->
-        <!-- Les niveaux sont affichés uniquement s'ils sont définis -->
-        <!-- Pour ce briefing, toutes les données sont null, donc le ladder sera vide de niveaux spécifiques -->
-
-        <!-- Exemple de structure si les données étaient présentes, triées par ordre décroissant de strike -->
-        <!-- <div class="rung"><div class="lv green">31,000</div><div class="dot green"></div><div class="ds"><b>Hedging Band HI</b></div></div> -->
-        <!-- <div class="rung"><div class="lv green">30,500</div><div class="dot green"></div><div class="ds"><b>Call Wall</b></div></div> -->
-        <!-- <div class="rung"><div class="lv blue">30,000</div><div class="dot blue"></div><div class="ds"><b>SPOT</b></div></div> -->
-        <!-- <div class="rung"><div class="lv amber">29,700</div><div class="dot amber"></div><div class="ds"><b>GAMMA FLIP</b></div></div> -->
-        <!-- <div class="rung"><div class="lv green">29,500</div><div class="dot green"></div><div class="ds"><b>Put Wall</b></div></div> -->
-        <!-- <div class="rung"><div class="lv grey">29,000</div><div class="dot grey"></div><div class="ds">Max Pain</div></div> -->
-        <!-- <div class="rung"><div class="lv green">28,700</div><div class="dot green"></div><div class="ds"><b>Hedging Band LO</b></div></div> -->
-
-        <!-- Puisque toutes les données sont null, nous affichons des placeholders -->
-        <div class="rung"><div class="lv grey">—</div><div class="dot grey"></div><div class="ds"><b>Hedging Band HI</b> — Donnée indisponible</div></div>
-        <div class="rung"><div class="lv grey">—</div><div class="dot grey"></div><div class="ds"><b>Call Wall</b> — Donnée indisponible</div></div>
-        <div class="rung"><div class="lv blue">—</div><div class="dot blue"></div><div class="ds"><b>SPOT</b> — Donnée indisponible</div></div>
-        <div class="rung"><div class="lv amber">—</div><div class="dot amber"></div><div class="ds"><b>GAMMA FLIP</b> — Donnée indisponible</div></div>
-        <div class="rung"><div class="lv grey">—</div><div class="dot grey"></div><div class="ds"><b>Put Wall</b> — Donnée indisponible</div></div>
-        <div class="rung"><div class="lv grey">—</div><div class="dot grey"></div><div class="ds"><b>Max Pain</b> — Donnée indisponible</div></div>
-        <div class="rung"><div class="lv grey">—</div><div class="dot grey"></div><div class="ds"><b>Hedging Band LO</b> — Donnée indisponible</div></div>
+        <div class="rung"><div class="lv green">30,325</div><div class="dot green"></div><div class="ds"><b>Call Wall (OI 3,376) + Hedging Band HI</b> — résistance majeure</div></div>
+        <div class="rung"><div class="lv grey">30,000</div><div class="dot grey"></div><div class="ds">Résistance psychologique</div></div>
+        <div class="rung"><div class="lv grey">29,500</div><div class="dot grey"></div><div class="ds">Max Pain</div></div>
+        <div class="rung"><div class="lv amber">29,440</div><div class="dot amber"></div><div class="ds"><b>GAMMA FLIP — PIVOT CRUCIAL</b></div></div>
+        <div class="rung"><div class="lv blue">29,171.1</div><div class="dot blue"></div><div class="ds"><b>SPOT</b> — référence (clôture mercredi)</div></div>
+        <div class="rung"><div class="lv grey">29,150</div><div class="dot grey"></div><div class="ds">Flux frais (3.30x) — support intermédiaire</div></div>
+        <div class="rung"><div class="lv grey">29,100</div><div class="dot grey"></div><div class="ds">Flux frais (7.92x) — support actif</div></div>
+        <div class="rung"><div class="lv grey">29,000</div><div class="dot grey"></div><div class="ds">Support psychologique</div></div>
+        <div class="rung"><div class="lv red">28,800</div><div class="dot red"></div><div class="ds"><b>Hedging Band LO</b> — borne basse de couverture des dealers</div></div>
+        <div class="rung"><div class="lv red">28,000</div><div class="dot red"></div><div class="ds"><b>Put Wall (OI 3,752)</b> — support majeur structurel</div></div>
       </div>
-      <div class="zone up">Zone de dampening<br>(au-dessus du pivot)<br>Données indisponibles</div>
-      <div class="zone down">Zone d'amplification<br>(sous le pivot)<br>Données indisponibles</div>
+      <div class="zone up" style="background:var(--redbg); border-color:var(--redline); color:var(--red);">Zone d'amplification<br>(au-dessus du pivot)</div>
+      <div class="zone down" style="background:var(--redbg); border-color:var(--redline); color:var(--red);">Zone d'amplification<br>(sous le pivot)</div>
     </div>
     <div class="ptag">Page 4 / 6</div>
   </section>
@@ -258,31 +238,26 @@
     <h2 class="title">Dealer Intent &amp; GEX by Expiry</h2>
     <div class="accent"></div>
 
-    <div class="expiry-alert">
-      <div class="ea-label">⚠ Données d'expiration indisponibles</div>
-      <div class="ea-text">Les informations sur les expirations hebdomadaires et les dynamiques de pinning ne sont pas disponibles. Il est impossible d'anticiper les mouvements autour des strikes majeurs. La prudence est de mise.</div>
-    </div>
-
     <div class="dgrid">
       <div>
         <div class="exptitle">Carte d'action des dealers (prochain ±1%)</div>
         <div class="dcard" style="margin-bottom:18px;">
-          <div class="dh green">PRIX MONTE&nbsp;→&nbsp;+1%</div>
-          <div class="db"><div class="dbig g">— Md$</div><div class="dsmall">DEALERS VENDENT</div><p style="margin-top:10px;">Les données sur l'action des dealers en cas de hausse du prix ne sont pas disponibles. Impossible d'évaluer les freins mécaniques à la hausse.</p></div>
+          <div class="dh red">PRIX MONTE&nbsp;→&nbsp;+1%</div>
+          <div class="db"><div class="dbig r">2,53 Md$</div><div class="dsmall">DEALERS VENDENT</div><p style="margin-top:10px;">Les dealers sont short gamma, ils vendront les rallies pour couvrir leurs positions. Cela peut freiner les mouvements haussiers et renforcer la résistance autour des niveaux clés. Le chemin de moindre résistance est baissier.</p></div>
         </div>
         <div class="dcard">
-          <div class="dh red">PRIX BAISSE&nbsp;→&nbsp;−1%</div>
-          <div class="db"><div class="dbig r">— Md$</div><div class="dsmall">DEALERS ACHÈTENT</div><p style="margin-top:10px;">Les données sur l'action des dealers en cas de baisse du prix ne sont pas disponibles. Impossible d'évaluer les coussins mécaniques à la baisse.</p></div>
+          <div class="dh green">PRIX BAISSE&nbsp;→&nbsp;−1%</div>
+          <div class="db"><div class="dbig g">1,61 Md$</div><div class="dsmall">DEALERS ACHÈTENT</div><p style="margin-top:10px;">Les dealers achèteront les dips pour couvrir leurs positions short gamma. Cela peut offrir un certain support temporaire, mais le régime d'amplification signifie que les baisses peuvent être prolongées si le momentum est fort.</p></div>
         </div>
       </div>
       <div>
         <div class="exptitle">GEX par expiration</div>
-        <!-- Puisque gex_by_expiry est vide, nous affichons des placeholders -->
-        <div class="exprow"><div class="en">Hebdomadaire<small>—</small></div><div class="bar"><i style="width:0%"></i></div><div class="ev">—</div></div>
-        <div class="exprow"><div class="en">Mensuel<small>—</small></div><div class="bar"><i style="width:0%"></i></div><div class="ev">—</div></div>
-        <div class="exprow"><div class="en">Trimestriel<small>—</small></div><div class="bar"><i style="width:0%"></i></div><div class="ev">—</div></div>
-        <div class="exprow"><div class="en">LEAPS<small>—</small></div><div class="bar"><i style="width:0%"></i></div><div class="ev">—</div></div>
-        <div class="keyline">CLÉ : Les données GEX par expiration sont indisponibles. Il est impossible d'évaluer la domination des expirations et leur impact sur le marché. Le flux frais et les niveaux clés ne peuvent pas être confirmés. Rester prudent et attendre la mise à jour des données.</div>
+        <div class="exprow"><div class="en">0DTE<small>0 jour</small></div><div class="bar"><i style="width:100%; background:linear-gradient(90deg,#b23a44,#cf5560);"></i></div><div class="ev" style="color:#cf5560;">-1,83B</div></div>
+        <div class="exprow"><div class="en">Hebdomadaire<small>WEEKLY</small></div><div class="bar"><i style="width:50%; background:linear-gradient(90deg,#b23a44,#cf5560);"></i></div><div class="ev" style="color:#cf5560;">-0,07B</div></div>
+        <div class="exprow"><div class="en">Mensuel<small>MONTHLY</small></div><div class="bar"><i style="width:50%; background:linear-gradient(90deg,#2f7d56,#4cba7e);"></i></div><div class="ev">+0,39B</div></div>
+        <div class="exprow"><div class="en">Trimestriel<small>QUARTERLY</small></div><div class="bar"><i style="width:0%;"></i></div><div class="ev">0,0B</div></div>
+        <div class="exprow"><div class="en">LEAPS<small>LEAPS</small></div><div class="bar"><i style="width:50%; background:linear-gradient(90deg,#2f7d56,#4cba7e);"></i></div><div class="ev">+0,58B</div></div>
+        <div class="keyline">CLÉ : Le <b>GEX 0DTE est fortement négatif (-1,83 Md$)</b>, ce qui indique une volatilité intraday potentiellement très élevée et une amplification des mouvements. Le GEX hebdomadaire est également négatif. Les dealers sont vendeurs de gamma, ce qui signifie qu'ils vont amplifier les mouvements directionnels. Le flux frais baissier autour de 29,230 et 29,100 renforce la pression à la baisse.</div>
       </div>
     </div>
     <div class="ptag">Page 5 / 6</div>
@@ -297,30 +272,30 @@
         <tr><th style="width:14%">Scénario</th><th style="width:24%">Déclencheur</th><th style="width:28%">Triggers Price Action</th><th style="width:18%">Zones Cibles</th><th style="width:16%">Posture</th></tr>
       </thead>
       <tbody>
-        <tr class="rown">
-          <td><span class="scn">NEUTRE</span></td>
-          <td>Données de marché indisponibles. Régime indéterminé.</td>
-          <td>Absence de direction claire. Mouvements erratiques ou range étroit sans conviction.</td>
-          <td>—</td>
-          <td>Attendre la mise à jour des données. Éviter les prises de position.</td>
+        <tr class="rowr">
+          <td><span class="scn">BAISSIER</span></td>
+          <td>Le spot reste sous 29,440. Flux frais baissier dominant. Régime d'amplification.</td>
+          <td>Rebond échouant sous le pivot, momentum vendeur. Cassure de supports avec volume.</td>
+          <td>29,000 → 28,800, ext. 28,000.</td>
+          <td>Vendre les rebonds. Scénario privilégié. Attendre la cassure du Put Wall.</td>
         </tr>
         <tr class="rown">
-          <td><span class="scn">ATTENTE</span></td>
-          <td>Chargement des données de positionnement des dealers en cours.</td>
-          <td>Le marché attend des catalyseurs ou des informations claires sur la microstructure.</td>
-          <td>—</td>
-          <td>Observer. Ne pas anticiper.</td>
+          <td><span class="scn">RANGE</span></td>
+          <td>Le spot oscille entre 28,800 et 29,440. Pas de catalyseur macro fort.</td>
+          <td>Rotation entre les bornes. Rejets nets aux bords. Volume en baisse.</td>
+          <td>Canal 28,800 – 29,440.</td>
+          <td>Fade les bords. Milieu = attendre. Volatilité intraday élevée.</td>
         </tr>
-        <tr class="rown">
-          <td><span class="scn">PRUDENCE</span></td>
-          <td>Incertitude due à l'absence de niveaux clés (gamma flip, walls).</td>
-          <td>Volatilité potentielle sans repères clairs.</td>
-          <td>—</td>
-          <td>Réduire l'exposition. Prioriser la préservation du capital.</td>
+        <tr class="rowg">
+          <td><span class="scn">HAUSSIER</span></td>
+          <td>Reclaim net de 29,440 (clôture + volume). Bascule en régime de dampening.</td>
+          <td>Reclaim du pivot, momentum acheteur. Rebond sur 29,440 qui tient.</td>
+          <td>29,500 → 30,000, ext. 30,325.</td>
+          <td>Acheter les cassures du pivot. Réévaluer le régime.</td>
         </tr>
       </tbody>
     </table>
-    <div class="skip"><b>SKIP JEUDI SI&nbsp;:</b> les données LevelBrief ne sont pas complètes avant l'ouverture. L'absence de niveaux clés (gamma flip, call/put walls, max pain) rend toute analyse technique ou de microstructure incertaine. Attendre impérativement un rafraîchissement complet des données pour toute prise de décision.</div>
+    <div class="skip"><b>SKIP JEUDI SI&nbsp;:</b> gap d'ouverture sous 28,000 OU au-dessus de 30,325 dans les 30 premières minutes — niveaux temporairement non fiables, attendre un nouvel équilibre. Le <b>GEX 0DTE négatif</b> peut entraîner des mouvements intraday très rapides et amplifiés. Rafraîchir LevelBrief avant l'ouverture pour confirmer les niveaux mis à jour.</div>
     <div class="ptag">Page 6 / 6</div>
   </section>
 
