@@ -150,16 +150,17 @@
 
   <!-- PAGE 1 -->
   <section class="page dark cover">
-    <div class="statusbar">STATUS: PRE-MARKET&nbsp;&nbsp;//&nbsp;&nbsp;TICKER: NQ&nbsp;&nbsp;//&nbsp;&nbsp;DATE: 13 JUIL 2026</div>
+    <div class="statusbar">STATUS: PRE-MARKET&nbsp;&nbsp;//&nbsp;&nbsp;TICKER: NQ&nbsp;&nbsp;//&nbsp;&nbsp;DATE: 13 JUL 2026</div>
     <h1>NQ Pre-Market Briefing</h1>
-    <div class="sub">Régime de Gamma Positif &amp; Amortissement — Pivot 29,300</div>
+    <div class="sub">Gamma Positif &amp; Régime Non Confirmé — Pivot 29,320</div>
     <div class="coveraccent"></div>
     <div class="badges">
-      <span class="badge on">POSITIVE GAMMA</span>
-      <span class="badge on">MEAN REVERSION</span>
-      <span class="badge">FLUX HAUSSIER</span>
+      <span class="badge on">GAMMA POSITIF</span>
+      <span class="badge">MEAN REVERSION</span>
+      <span class="badge warn">RÉGIME NON CONFIRMÉ</span>
+      <span class="badge">FLUX FRAIS MIXTE</span>
     </div>
-    <div class="src">DATA SOURCE: LEVELBRIEF (NDX) //<br>MAJ LUNDI 13/07 06:00 GMT</div>
+    <div class="src">DATA SOURCE: LEVELBRIEF (NDX) //<br>MAJ LUNDI 13/07 08:00 GMT</div>
     <div class="ptag">Page 1 / 6</div>
   </section>
 
@@ -169,17 +170,17 @@
       <div class="col">
         <div class="eyebrow">The Bottom Line</div>
         <h3>CORE THESIS&nbsp;:</h3>
-        <div class="thesis">RANGE / DAMPENING</div>
-        <div class="callout">LONGS FAVORISÉS AU-DESSUS DE 29,300.<br>SHORTS SI CASSURE NETTE DU PIVOT + VOLUME.</div>
+        <div class="thesis" style="color:var(--amber);">RANGE INCERTAIN / ATTENTE</div>
+        <div class="callout" style="background:var(--amber); border-color:#a0721a;">ATTENDRE LA CONFIRMATION DU RÉGIME.<br>SURVEILLER LE PIVOT 29,320.</div>
         <div class="mlabel">Microstructure</div>
-        <p>NQ traite autour de <b>29374.32 (NDX)</b>, soit <b>+74.32 pts au-dessus du pivot à 29,300</b>. Gamma net positif à <b>1.39 Md$</b> : régime de dampening confirmé, favorisant la mean-reversion. Les dealers sont longs gamma, ce qui signifie qu'ils vendent les rallies et achètent les dips, compressant ainsi le range. Le flux frais montre un intérêt autour de 29510 et 29150. La bande de couverture des dealers est entre 29,090 et 30,400. Une perte de 29,300 ferait basculer le régime en amplification.</p>
+        <p>NQ traite autour de <b>29,279.69 (NDX), soit sous le pivot gamma à 29,320</b>. Le gamma net est positif (+0,71 Md$), mais le régime de dampening n'est <b>pas encore confirmé</b>. Une reprise du pivot 29,320 confirmerait un régime de mean-reversion. Un échec à le reprendre, et une perte du Put Wall à 28,000, ferait basculer la structure vers un risque d'amplification. Le flux frais est mixte, avec des calls actifs autour de 29,290 et des puts autour de 29,250. Les dealers sont neutres.</p>
       </div>
       <div class="col">
         <div class="eyebrow">The Risk Engine</div>
-        <div class="ring"><span>Range Risk</span></div>
+        <div class="ring" style="border-color:#d4a017;"><span>Uncertain Range</span></div>
         <div class="ringlbls"><span>Range-Bound</span><span>Breakout</span></div>
-        <div class="ivbox">IV30&nbsp; 23.21% &nbsp;→&nbsp; vol comprimée (environnement calme)</div>
-        <div class="notebox">Skew IV <b>+5.13%</b> côté puts : la protection reste présente, indiquant une vigilance du marché. Le Net GEX est positif à <b>1.39 Md$</b>, confirmant le régime de dampening. Les zones de pinning principales sont à 30,325 (résistance) et 29,300 (pivot de régime). Le Max Pain est à 29,400, ce qui pourrait agir comme un aimant.</div>
+        <div class="ivbox" style="background:var(--amberbg); border-color:var(--amber);">IV30&nbsp; 24,04% &nbsp;→&nbsp; vol modérée (environnement attentiste)</div>
+        <div class="notebox">Skew IV +6,33% côté puts : la demande de protection reste élevée, signalant une certaine prudence du marché. Net GEX à +0,71 Md$ : le gamma positif est présent mais faible, ce qui rend le régime de dampening fragile tant que le spot est sous le pivot. Les niveaux clés à surveiller sont le Gamma Flip à 29,320 et le Put Wall à 28,000.</div>
       </div>
     </div>
     <div class="ptag">Page 2 / 6</div>
@@ -190,14 +191,14 @@
     <h2 class="title">Conviction Matrix &amp; Risk Tone</h2>
     <div class="accent"></div>
     <div class="metrics">
-      <div class="metric"><div class="ml">Momentum</div><div class="mv g">3/5</div><div class="md">Flux frais mixte, mais spot au-dessus du pivot</div></div>
-      <div class="metric"><div class="ml">Options</div><div class="mv g">4/5</div><div class="md">Gamma+ confirmé, skew put modéré</div></div>
-      <div class="metric"><div class="ml">Volatility</div><div class="mv g">2/5</div><div class="md">IV 23.21% – comprimée</div></div>
+      <div class="metric"><div class="ml">Momentum</div><div class="mv a">2/5</div><div class="md">Flux frais mixte, sous le pivot</div></div>
+      <div class="metric"><div class="ml">Options</div><div class="mv a">3/5</div><div class="md">Gamma+ faible, skew put élevé</div></div>
+      <div class="metric"><div class="ml">Volatility</div><div class="mv a">3/5</div><div class="md">IV 24,04% – modérée</div></div>
       <div class="metric"><div class="ml">Expiry Risk</div><div class="mv n">1/5</div><div class="md">Pas d'expiry majeure cette semaine</div></div>
     </div>
     <div class="shift">
-      <div class="sh">GEX SHIFT : <b>+1.39 Md$</b> &nbsp;→&nbsp; long gamma · dampening</div>
-      <div class="sd">Le spot est au-dessus du pivot de gamma à 29,300, confirmant un régime de dampening. Les dealers sont longs gamma, ce qui favorise la compression du range. La bande de couverture des dealers est entre 29,090 et 30,400. Les niveaux sont fiables tant que le spot tient au-dessus de 29,300.</div>
+      <div class="sh">GEX SHIFT : <b>+0,71 Md$</b> &nbsp;(stable) &nbsp;→&nbsp; gamma positif faible · régime non confirmé</div>
+      <div class="sd">Le spot est sous le pivot gamma à 29,320. Le régime de dampening n'est pas confirmé. La bande de couverture des dealers est 29,070–30,325. Le flux frais montre un intérêt pour les calls à 29,290 et 29,280, mais aussi pour les puts à 29,250 et 29,150. La structure est fragile et nécessite une confirmation au-dessus du pivot pour un biais haussier.</div>
     </div>
     <div class="gilabel">Indices Globaux (à actualiser lundi avant ouverture)</div>
     <div class="indices">
@@ -215,26 +216,26 @@
     <div class="accent"></div>
     <div class="laddwrap">
       <div class="ladder">
-        <div class="rung"><div class="lv green">30400</div><div class="dot green"></div><div class="ds"><b>Hedging Band HI</b> — Borne haute de la bande de couverture des dealers</div></div>
-        <div class="rung"><div class="lv green">30325</div><div class="dot green"></div><div class="ds"><b>Pinning Zone / Résistance</b> — Plus grand OI gamma positif</div></div>
-        <div class="rung"><div class="lv green">30000</div><div class="dot green"></div><div class="ds"><b>Call Wall (OI 3539)</b> — Résistance majeure</div></div>
-        <div class="rung"><div class="lv grey">29800</div><div class="dot grey"></div><div class="ds">Flux frais (0.60×) — Résistance intermédiaire</div></div>
-        <div class="rung"><div class="lv grey">29700</div><div class="dot grey"></div><div class="ds">Flux frais (0.90×) — Résistance intermédiaire</div></div>
-        <div class="rung"><div class="lv grey">29600</div><div class="dot grey"></div><div class="ds">Flux frais (1.36×) — Résistance intermédiaire</div></div>
-        <div class="rung"><div class="lv grey">29510</div><div class="dot grey"></div><div class="ds">Flux frais (3.71×) — Résistance intermédiaire</div></div>
-        <div class="rung"><div class="lv blue">29374.32</div><div class="dot blue"></div><div class="ds"><b>SPOT</b> — Référence actuelle</div></div>
-        <div class="rung"><div class="lv amber">29400</div><div class="dot amber"></div><div class="ds"><b>Max Pain</b> — Point d'attraction</div>
-        <div class="rung"><div class="lv amber">29300</div><div class="dot amber"></div><div class="ds"><b>GAMMA FLIP / PIVOT CRUCIAL</b> — Bascule régime amplification</div></div>
-        <div class="rung"><div class="lv grey">29250</div><div class="dot grey"></div><div class="ds">Flux frais (1.02×) — Support intermédiaire</div></div>
-        <div class="rung"><div class="lv grey">29200</div><div class="dot grey"></div><div class="ds">Flux frais (0.28×) — Support intermédiaire</div></div>
-        <div class="rung"><div class="lv grey">29150</div><div class="dot grey"></div><div class="ds">Flux frais (1.48×) — Support intermédiaire</div></div>
-        <div class="rung"><div class="lv grey">29100</div><div class="dot grey"></div><div class="ds">Flux frais (0.78×) — Support intermédiaire</div></div>
-        <div class="rung"><div class="lv green">29090</div><div class="dot green"></div><div class="ds"><b>Hedging Band LO</b> — Borne basse de la bande de couverture des dealers</div></div>
-        <div class="rung"><div class="lv green">29000</div><div class="dot green"></div><div class="ds"><b>Support majeur</b> — Zone de Put OI</div></div>
-        <div class="rung"><div class="lv green">28000</div><div class="dot green"></div><div class="ds"><b>Put Wall (OI 4105)</b> — Support majeur structurel</div></div>
+        <div class="rung"><div class="lv green">30,325</div><div class="dot green"></div><div class="ds"><b>Hedging Band HI</b> — 75e percentile GEX · borne haute</div></div>
+        <div class="rung"><div class="lv green">30,100</div><div class="dot green"></div><div class="ds"><b>Strike GEX (+0,24B)</b> — résistance secondaire</div></div>
+        <div class="rung"><div class="lv green">30,000</div><div class="dot green"></div><div class="ds"><b>Call Wall (OI 3539)</b> — résistance majeure</div></div>
+        <div class="rung"><div class="lv green">29,700</div><div class="dot green"></div><div class="ds"><b>Strike GEX (+0,23B)</b> — résistance intermédiaire</div></div>
+        <div class="rung"><div class="lv green">29,600</div><div class="dot green"></div><div class="ds"><b>Strike GEX (+0,10B)</b> — résistance mineure</div></div>
+        <div class="rung"><div class="lv blue">29,279.69</div><div class="dot blue"></div><div class="ds"><b>SPOT</b> — référence (clôture vendredi)</div></div>
+        <div class="rung"><div class="lv amber">29,320</div><div class="dot amber"></div><div class="ds"><b>GAMMA FLIP / PIVOT CRUCIAL</b></div></div>
+        <div class="rung"><div class="lv grey">29,300</div><div class="dot grey"></div><div class="ds">Max Pain — zone d'attraction</div></div>
+        <div class="rung"><div class="lv grey">29,290</div><div class="dot grey"></div><div class="ds">Flux frais call (37.54x) — résistance immédiate</div></div>
+        <div class="rung"><div class="lv grey">29,280</div><div class="dot grey"></div><div class="ds">Flux frais call (20.27x) — résistance immédiate</div></div>
+        <div class="rung"><div class="lv grey">29,250</div><div class="dot grey"></div><div class="ds">Flux frais put (4.77x) — support immédiat</div></div>
+        <div class="rung"><div class="lv green">29,200</div><div class="dot green"></div><div class="ds"><b>Strike GEX (+0,12B)</b> — support</div></div>
+        <div class="rung"><div class="lv green">29,150</div><div class="dot green"></div><div class="ds"><b>Strike GEX (-0,10B)</b> — support</div></div>
+        <div class="rung"><div class="lv green">29,100</div><div class="dot green"></div><div class="ds"><b>Strike GEX (+0,11B)</b> — support</div></div>
+        <div class="rung"><div class="lv green">29,070</div><div class="dot green"></div><div class="ds"><b>Hedging Band LO</b> — 25e percentile GEX · borne basse</div></div>
+        <div class="rung"><div class="lv green">29,000</div><div class="dot green"></div><div class="ds"><b>Strike GEX (-0,14B)</b> — support</div></div>
+        <div class="rung"><div class="lv red">28,000</div><div class="dot red"></div><div class="ds"><b>Put Wall (OI 4105)</b> — support majeur</div></div>
       </div>
-      <div class="zone up">Zone de dampening<br>+ mean-reversion<br>(au-dessus du pivot)</div>
-      <div class="zone down">Zone d'amplification<br>(sous 29,300)</div>
+      <div class="zone up" style="height:250px;">Zone de dampening<br>(au-dessus du pivot)</div>
+      <div class="zone down" style="height:250px; bottom:10px;">Zone d'amplification<br>(sous le pivot)</div>
     </div>
     <div class="ptag">Page 4 / 6</div>
   </section>
@@ -249,21 +250,21 @@
         <div class="exptitle">Carte d'action des dealers (prochain ±1%)</div>
         <div class="dcard" style="margin-bottom:18px;">
           <div class="dh green">PRIX MONTE&nbsp;→&nbsp;+1%</div>
-          <div class="db"><div class="dbig g">1.80 Md$</div><div class="dsmall">DEALERS VENDENT</div><p style="margin-top:10px;">Les dealers vendront les rallies pour rééquilibrer leurs positions, contribuant à la compression du range. Le mouvement haussier sera amorti.</p></div>
+          <div class="db"><div class="dbig g">1,94 Md$</div><div class="dsmall">DEALERS VENDENT</div><p style="margin-top:10px;">Les dealers vendent pour couvrir leurs positions si le prix monte de 1%. Cela crée une résistance mécanique à la hausse, mais le montant est modéré. Le spot étant sous le pivot, la hausse pourrait être freinée.</p></div>
         </div>
         <div class="dcard">
           <div class="dh red">PRIX BAISSE&nbsp;→&nbsp;−1%</div>
-          <div class="db"><div class="dbig r">3.19 Md$</div><div class="dsmall">DEALERS ACHÈTENT</div><p style="margin-top:10px;">Les dips seront achetés par les dealers, offrant un support mécanique au marché. Le mouvement baissier sera amorti tant que le pivot 29,300 tient.</p></div>
+          <div class="db"><div class="dbig r">2,65 Md$</div><div class="dsmall">DEALERS ACHÈTENT</div><p style="margin-top:10px;">Les dealers achètent pour couvrir leurs positions si le prix baisse de 1%. Cela crée un support mécanique à la baisse. Le montant est plus élevé que pour la hausse, indiquant un coussin plus solide en cas de repli.</p></div>
         </div>
       </div>
       <div>
         <div class="exptitle">GEX par expiration</div>
-        <div class="exprow"><div class="en">0DTE<small>Aujourd'hui</small></div><div class="bar"><i style="width:0%; background:linear-gradient(90deg,#b23a44,#cf5560);"></i></div><div class="ev" style="color:#cf5560;">-0.81B</div></div>
-        <div class="exprow"><div class="en">Hebdomadaire<small>17 juillet</small></div><div class="bar"><i style="width:51%"></i></div><div class="ev">+1.52B</div></div>
-        <div class="exprow"><div class="en">Mensuel<small>21 août</small></div><div class="bar"><i style="width:2%"></i></div><div class="ev">+0.06B</div></div>
-        <div class="exprow"><div class="en">Trimestriel<small>18 sept</small></div><div class="bar"><i style="width:0%; background:linear-gradient(90deg,#b23a44,#cf5560);"></i></div><div class="ev" style="color:#cf5560;">-0.05B</div></div>
-        <div class="exprow"><div class="en">LEAPS<small>Long terme</small></div><div class="bar"><i style="width:23%"></i></div><div class="ev">+0.67B</div></div>
-        <div class="keyline">CLÉ : Le GEX hebdomadaire est le plus important (<b>+1.52 Md$</b>), indiquant un potentiel d'amortissement significatif pour la semaine. Le 0DTE est négatif (<b>-0.81 Md$</b>), ce qui pourrait introduire une volatilité intraday si le marché s'approche de certains strikes. Le régime général reste celui du dampening.</div>
+        <div class="exprow"><div class="en">0DTE<small>13 juil — 0 exp</small></div><div class="bar"><i style="width:40%; background:linear-gradient(90deg,#b23a44,#cf5560);"></i></div><div class="ev" style="color:#cf5560;">-1,15B</div></div>
+        <div class="exprow"><div class="en">Hebdomadaire<small>17 juil — 4 exp</small></div><div class="bar"><i style="width:46%;"></i></div><div class="ev">+1,30B</div></div>
+        <div class="exprow"><div class="en">Mensuel<small>17 juil — 4 exp</small></div><div class="bar"><i style="width:0%;"></i></div><div class="ev">+0,00B</div></div>
+        <div class="exprow"><div class="en">Trimestriel<small>18 sept — 68 exp</small></div><div class="bar"><i style="width:2%; background:linear-gradient(90deg,#b23a44,#cf5560);"></i></div><div class="ev" style="color:#cf5560;">-0,07B</div></div>
+        <div class="exprow"><div class="en">LEAPS<small>18 déc — 158 exp</small></div><div class="bar"><i style="width:23%;"></i></div><div class="ev">+0,64B</div></div>
+        <div class="keyline">CLÉ : Le GEX 0DTE est négatif (-1,15 Md$), ce qui peut amplifier les mouvements intraday. Le GEX hebdomadaire est positif (+1,30 Md$), offrant un certain amortissement sur la semaine. Le spot étant sous le pivot, le régime de dampening n'est pas confirmé. Les dealers ont un biais légèrement acheteur en cas de baisse, et vendeur en cas de hausse. Surveiller la réaction autour du pivot 29,320.</div>
       </div>
     </div>
     <div class="ptag">Page 5 / 6</div>
@@ -280,28 +281,28 @@
       <tbody>
         <tr class="rowg">
           <td><span class="scn">HAUSSIER</span></td>
-          <td>Le spot tient au-dessus de 29,300. Les dips sont achetés.</td>
-          <td>Repli sur 29,300 qui rebondit. Reclaim EMA/VWAP + retest qui tient. Momentum vers le Call Wall.</td>
-          <td>29,510 → 29,700, ext. 30,000.</td>
-          <td>Acheter les replis. Scénario privilégié tant que 29,300 tient.</td>
+          <td>Le spot reprend et tient au-dessus de 29,320 (gamma flip). Confirmation du régime de dampening.</td>
+          <td>Reclaim du pivot 29,320 avec volume. Retest du pivot qui tient. Momentum vers Max Pain.</td>
+          <td>29,300 → 29,600, ext. 30,000 (Call Wall).</td>
+          <td>Acheter les replis au-dessus du pivot. Scénario à confirmer.</td>
         </tr>
         <tr class="rown">
           <td><span class="scn">RANGE</span></td>
-          <td>Marché en régime de dampening. Pas de catalyseur macro fort.</td>
-          <td>Rotation 29,300–30,000. Rejets nets aux bords. Volume en baisse.</td>
-          <td>Canal 29,300 – 30,000.</td>
-          <td>Fade les bords. Milieu = attendre.</td>
+          <td>Le spot oscille autour du pivot 29,320 sans direction claire. Flux frais mixte.</td>
+          <td>Rotation 29,070–29,320. Rejets nets aux bords. Volume en baisse.</td>
+          <td>Canal 29,070 – 29,320.</td>
+          <td>Fade les bords. Milieu = attendre. Attentif à la confirmation du régime.</td>
         </tr>
         <tr class="rowr">
           <td><span class="scn">BAISSIER</span></td>
-          <td>Cassure nette de 29,300 (clôture + volume). Bascule en régime d'amplification.</td>
-          <td>Échec sous le pivot, momentum vendeur. Échec de reclaim 29,300. Pas de fade.</td>
-          <td>29,150 → 29,090, puis 29,000.</td>
-          <td>Suivre le momentum. Ne pas acheter le couteau. Réévaluer sur 29,000.</td>
+          <td>Échec à reprendre 29,320 et cassure nette de 29,070 (Hedging Band LO). Risque d'amplification.</td>
+          <td>Échec sous le pivot, momentum vendeur. Cassure de 29,070 avec volume. Pas de fade.</td>
+          <td>29,000 → 28,000 (Put Wall).</td>
+          <td>Suivre le momentum. Ne pas acheter le couteau. Réévaluer sur 28,000.</td>
         </tr>
       </tbody>
     </table>
-    <div class="skip"><b>SKIP LUNDI SI&nbsp;:</b> gap d'ouverture sous 29,090 OU au-dessus de 30,400 dans les 30 premières minutes — niveaux temporairement non fiables, attendre un nouvel équilibre. Rafraîchir LevelBrief avant l'ouverture pour confirmer les niveaux mis à jour.</div>
+    <div class="skip"><b>SKIP LUNDI SI&nbsp;:</b> gap d'ouverture sous 29,070 OU au-dessus de 30,325 dans les 30 premières minutes — niveaux temporairement non fiables, attendre un nouvel équilibre. Le régime étant non confirmé, la prudence est de mise. Rafraîchir LevelBrief avant l'ouverture pour confirmer les niveaux mis à jour.</div>
     <div class="ptag">Page 6 / 6</div>
   </section>
 
