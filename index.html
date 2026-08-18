@@ -152,13 +152,13 @@
   <section class="page dark cover">
     <div class="statusbar">STATUS: PRE-MARKET&nbsp;&nbsp;//&nbsp;&nbsp;TICKER: NQ&nbsp;&nbsp;//&nbsp;&nbsp;DATE: 18 AOÛT 2026</div>
     <h1>NQ Pre-Market Briefing</h1>
-    <div class="sub">Positive Gamma &amp; Dampening Regime — Pivot 30,010 · Expiry Week</div>
+    <div class="sub">Negative Gamma &amp; Amplification Regime — Pivot 29,570 · Volatilité Accrue</div>
     <div class="coveraccent"></div>
     <div class="badges">
-      <span class="badge on">POSITIVE GAMMA</span>
-      <span class="badge on">MEAN REVERSION</span>
-      <span class="badge warn">EXPIRY WEEK</span>
-      <span class="badge">FLUX HAUSSIER</span>
+      <span class="badge warn">NEGATIVE GAMMA</span>
+      <span class="badge on">AMPLIFICATION</span>
+      <span class="badge">VOLATILITÉ ACCRUE</span>
+      <span class="badge">FLUX BAISSIER</span>
     </div>
     <div class="src">DATA SOURCE: LEVELBRIEF (NDX) //<br>MAJ LUNDI 17/08 18:30 GMT</div>
     <div class="ptag">Page 1 / 6</div>
@@ -170,17 +170,17 @@
       <div class="col">
         <div class="eyebrow">The Bottom Line</div>
         <h3>CORE THESIS&nbsp;:</h3>
-        <div class="thesis">RANGE HAUSSIER / DAMPENING</div>
-        <div class="callout">LONGS FAVORISÉS AU-DESSUS DE 30,010.<br>SHORTS SI CASSURE NETTE DU PIVOT + VOLUME.</div>
+        <div class="thesis" style="color:var(--red);">RANGE BAISSIER / AMPLIFICATION</div>
+        <div class="callout" style="background:var(--red); border-color:#8a2a32;">SHORTS FAVORISÉS SOUS 29,570.<br>LONGS SI RECLAIM NET DU PIVOT + VOLUME.</div>
         <div class="mlabel">Microstructure</div>
-        <p>NQ traite autour de <b>29995.38</b> (NDX), soit <b>légèrement sous le gamma flip à 30,010</b> — les dealers sont en transition de couverture. Gamma net <b>+2.4 Md$</b> : régime de dampening bien établi, mean-reversion dominant. <b>Attention Expiry Week</b> : expirations hebdomadaires vendredi pourraient amplifier les mouvements intraday autour des strikes majeurs. Le flux frais confirme l'intérêt acheteur sur 30,010 et 30,000. Dealers neutres à légèrement longs : pas de frein mécanique à la hausse.</p>
+        <p>NQ traite autour de 29,437 (NDX), soit <b>-133 pts sous le pivot à 29,570</b> — le régime d'amplification est confirmé. Gamma net -1,06 Md$ : les mouvements sont susceptibles d'être étendus. <b>Attention : les dealers sont short gamma</b>, ils achètent les rallies et vendent les dips, ce qui amplifie les mouvements. Le flux frais montre un intérêt sur les puts à 29,350 et 29,600. Les zones de flux forcé sont 29,100 (put wall) et 29,600 (call wall) : le hedging des dealers s'intensifiera vers le côté qui cède en premier. Un reclaim de 29,570 ferait basculer le régime en dampening.</p>
       </div>
       <div class="col">
         <div class="eyebrow">The Risk Engine</div>
-        <div class="ring"><span>Range Risk</span></div>
+        <div class="ring" style="border-color:#e3bcc0;"><span>Trend Risk</span></div>
         <div class="ringlbls"><span>Range-Bound</span><span>Breakout</span></div>
-        <div class="ivbox">IV30&nbsp; <b>18.38%</b> &nbsp;→&nbsp; vol comprimée (environnement calme)</div>
-        <div class="notebox">Skew IV <b>+3.44%</b> côté puts : protection toujours présente mais moins marquée vs semaine passée. Indique l'absence d'euphorie — marché vigilant. Net GEX en hausse (<b>+2.4 Md$</b>) : l'amortissement se renforce légèrement, régime dampening plus affirmé. Context Expiry : pinning attendu vendredi sur strikes ronds (30,000 / 29,000).</div>
+        <div class="ivbox" style="background:var(--redbg); border-color:var(--redline); color:#492427;">IV30&nbsp; 19,32% &nbsp;→&nbsp; vol en expansion (environnement volatil)</div>
+        <div class="notebox">Skew IV +3,75% côté puts : la protection est active et marquée. Indique une prudence accrue du marché. Net GEX en baisse (-1,06 Md$) : l'amplification se renforce, régime négatif gamma bien établi. Le Max Pain est à 29,200, ce qui pourrait agir comme un aimant à court terme.</div>
       </div>
     </div>
     <div class="ptag">Page 2 / 6</div>
@@ -191,14 +191,14 @@
     <h2 class="title">Conviction Matrix &amp; Risk Tone</h2>
     <div class="accent"></div>
     <div class="metrics">
-      <div class="metric"><div class="ml">Momentum</div><div class="mv g">4/5</div><div class="md">Flux frais haussier 30,010–30,000</div></div>
-      <div class="metric"><div class="ml">Options</div><div class="mv a">3/5</div><div class="md">Gamma+ en hausse, skew put modéré</div></div>
-      <div class="metric"><div class="ml">Volatility</div><div class="mv g">2/5</div><div class="md">IV 18.38% – comprimée</div></div>
-      <div class="metric"><div class="ml">Expiry Risk</div><div class="mv a">2/5</div><div class="md">Expiry vendredi – pinning</div></div>
+      <div class="metric"><div class="ml">Momentum</div><div class="mv r">4/5</div><div class="md">Flux frais baissier 29,350–29,600</div></div>
+      <div class="metric"><div class="ml">Options</div><div class="mv r">4/5</div><div class="md">Gamma- en baisse, skew put marqué</div></div>
+      <div class="metric"><div class="ml">Volatility</div><div class="mv r">3/5</div><div class="md">IV 19,32% – en expansion</div></div>
+      <div class="metric"><div class="ml">Expiry Risk</div><div class="mv n">1/5</div><div class="md">Pas d'expiry majeure cette semaine</div></div>
     </div>
     <div class="shift">
-      <div class="sh">GEX SHIFT : <b>+2.4 Md$ / 1%</b> &nbsp;(↑ vs hier) &nbsp;→&nbsp; long gamma renforcé · dampening</div>
-      <div class="sd">Pivot à <b>30,010</b>. Bande de couverture : <b>29,400–30,450</b>. Le flux frais se concentre sur <b>30,010–30,000</b> (positionnement call actif). Expiry vendredi : gravitational pull vers <b>30,000</b> (Call Wall massif). Les niveaux sont fiables tant que le spot tient au-dessus de <b>30,010</b>. Risque de volatilité accrue jeudi soir / vendredi matin autour des strikes d'expiration.</div>
+      <div class="sh">GEX SHIFT : <b>-1,06 Md$ / 1%</b> &nbsp;(↓ vs précédent) &nbsp;→&nbsp; short gamma renforcé · amplification</div>
+      <div class="sd">Le pivot est à 29,570. Bande de couverture : 28,650–30,000. Le flux frais se concentre sur 29,350 et 29,600 (positionnement put actif). Les niveaux sont fiables tant que le spot reste sous 29,570. Risque de volatilité accrue et de mouvements étendus.</div>
     </div>
     <div class="gilabel">Indices Globaux (à actualiser mardi avant ouverture)</div>
     <div class="indices">
@@ -216,21 +216,21 @@
     <div class="accent"></div>
     <div class="laddwrap">
       <div class="ladder">
-        <div class="rung"><div class="lv green">30450</div><div class="dot green"></div><div class="ds"><b>Hedging Band HI</b> — 75e percentile GEX · borne haute élargie</div></div>
-        <div class="rung"><div class="lv grey">30300</div><div class="dot grey"></div><div class="ds">Flux frais (0.67×) — zone de construction call active</div></div>
-        <div class="rung"><div class="lv grey">30200</div><div class="dot grey"></div><div class="ds">Flux frais (0.26×) — positionnement haussier secondaire</div></div>
-        <div class="rung"><div class="lv grey">30100</div><div class="dot grey"></div><div class="ds">Flux frais (0.45×) — résistance intermédiaire</div></div>
-        <div class="rung"><div class="lv amber">30010</div><div class="dot amber"></div><div class="ds"><b>GAMMA FLIP / PIVOT CRUCIAL</b></div></div>
-        <div class="rung"><div class="lv green">30000</div><div class="dot green"></div><div class="ds"><b>Call Wall (OI 2837) + Cible Expiry</b> — aimant majeur vendredi</div></div>
-        <div class="rung"><div class="lv blue">29995.38</div><div class="dot blue"></div><div class="ds"><b>SPOT</b> — référence (clôture lundi)</div></div>
-        <div class="rung"><div class="lv grey">29800</div><div class="dot grey"></div><div class="ds">Flux frais (0.1×) — support intermédiaire</div></div>
-        <div class="rung"><div class="lv grey">29600</div><div class="dot grey"></div><div class="ds">Flux frais (0.67×) — support + aimant vendredi</div></div>
-        <div class="rung"><div class="lv green">29400</div><div class="dot green"></div><div class="ds"><b>Hedging Band LO</b> — support majeur structurel</div></div>
-        <div class="rung"><div class="lv green">29250</div><div class="dot green"></div><div class="ds"><b>Max Pain</b></div></div>
-        <div class="rung"><div class="lv green">29000</div><div class="dot green"></div><div class="ds"><b>Put Wall (OI 2348)</b> — support ultime si 29,400 cède</div></div>
+        <div class="rung"><div class="lv green">30,000</div><div class="dot green"></div><div class="ds"><b>Call Wall (OI 2822) + Hedging Band HI</b> — résistance majeure</div></div>
+        <div class="rung"><div class="lv grey">29,800</div><div class="dot grey"></div><div class="ds">Flux frais (0.44x) — résistance intermédiaire</div></div>
+        <div class="rung"><div class="lv grey">29,650</div><div class="dot grey"></div><div class="ds">Flux frais (0.25x) — résistance</div></div>
+        <div class="rung"><div class="lv grey">29,600</div><div class="dot grey"></div><div class="ds">Flux frais (0.41x) — résistance</div></div>
+        <div class="rung"><div class="lv amber">29,570</div><div class="dot amber"></div><div class="ds"><b>GAMMA FLIP / HVL — PIVOT CRUCIAL</b></div></div>
+        <div class="rung"><div class="lv blue">29,437.41</div><div class="dot blue"></div><div class="ds"><b>SPOT</b> — référence (clôture lundi)</div></div>
+        <div class="rung"><div class="lv grey">29,350</div><div class="dot grey"></div><div class="ds">Flux frais (2.13x) — support immédiat</div></div>
+        <div class="rung"><div class="lv grey">29,200</div><div class="dot grey"></div><div class="ds"><b>Max Pain</b> — aimant à court terme</div></div>
+        <div class="rung"><div class="lv red">29,100</div><div class="dot red"></div><div class="ds"><b>Put Wall (OI 1891)</b> — support majeur</div></div>
+        <div class="rung"><div class="lv grey">28,900</div><div class="dot grey"></div><div class="ds">Flux frais (0.14x) — support</div></div>
+        <div class="rung"><div class="lv red">28,650</div><div class="dot red"></div><div class="ds"><b>Hedging Band LO</b> — borne basse élargie</div></div>
+        <div class="rung"><div class="lv red">28,000</div><div class="dot red"></div><div class="ds"><b>Put Wall (OI 3285)</b> — support ultime</div></div>
       </div>
-      <div class="zone up">Zone de dampening<br>+ flux frais haussier<br>+ gravitational pull 30k<br>(au-dessus du pivot)</div>
-      <div class="zone down">Zone d'amplification<br>(sous 30,010)</div>
+      <div class="zone up" style="background:var(--greenbg); border-color:var(--greenline); color:var(--green);">Zone de dampening<br>(au-dessus du pivot)</div>
+      <div class="zone down" style="background:var(--redbg); border-color:var(--redline); color:var(--red);">Zone d'amplification<br>+ flux frais baissier<br>(sous le pivot)</div>
     </div>
     <div class="ptag">Page 4 / 6</div>
   </section>
@@ -240,31 +240,26 @@
     <h2 class="title">Dealer Intent &amp; GEX by Expiry</h2>
     <div class="accent"></div>
 
-    <div class="expiry-alert">
-      <div class="ea-label">⚠ Expiry Week — Vendredi 21 Août 2026</div>
-      <div class="ea-text">Expirations hebdomadaires majeures vendredi. Attendre un <b>pinning renforcé sur 30,000 et 29,000</b> en fin de semaine. Le GEX hebdomadaire domine (2.18B) : les dealers vont défendre activement ces strikes. Intraday mardi : mouvements possiblement plus amples qu'en semaine normale dans les zones entre les strikes. Gamma local 0DTE devient actif vendredi dès l'ouverture US.</div>
-    </div>
-
     <div class="dgrid">
       <div>
         <div class="exptitle">Carte d'action des dealers (prochain ±1%)</div>
         <div class="dcard" style="margin-bottom:18px;">
           <div class="dh green">PRIX MONTE&nbsp;→&nbsp;+1%</div>
-          <div class="db"><div class="dbig g">1.47 Md$</div><div class="dsmall">DEALERS VENDENT</div><p style="margin-top:10px;">Frein mécanique à la hausse modéré. Avec le flux frais qui se construit en 30,010–30,000, le chemin de moindre résistance reste haussier. La mécanique d'expiry amplifie légèrement l'attraction vers 30,000.</p></div>
+          <div class="db"><div class="dbig g">2,96 Md$</div><div class="dsmall">DEALERS VENDENT</div><p style="margin-top:10px;">Les dealers sont short gamma, ils vendront les rallies pour couvrir leurs positions. Cela peut freiner la hausse et amplifier les rejets sous les résistances.</p></div>
         </div>
         <div class="dcard">
           <div class="dh red">PRIX BAISSE&nbsp;→&nbsp;−1%</div>
-          <div class="db"><div class="dbig r">3.87 Md$</div><div class="dsmall">DEALERS ACHÈTENT</div><p style="margin-top:10px;">Coussin à la baisse renforcé. Les replis restent absorbés mécaniquement tant que 30,010 tient. Support élargi sur 29,000 (Put Wall d'expiry).</p></div>
+          <div class="db"><div class="dbig r">1,90 Md$</div><div class="dsmall">DEALERS ACHÈTENT</div><p style="margin-top:10px;">Les dealers achèteront les dips pour couvrir leurs positions. Cela peut créer des rebonds temporaires mais aussi étendre les mouvements à la baisse si les supports cèdent.</p></div>
         </div>
       </div>
       <div>
         <div class="exptitle">GEX par expiration</div>
-        <div class="exprow"><div class="en">0DTE<small>18 août — 0 exp</small></div><div class="bar"><i style="width:0%; background:linear-gradient(90deg,#b23a44,#cf5560);"></i></div><div class="ev" style="color:#cf5560;">-1.02B</div></div>
-        <div class="exprow"><div class="en">Hebdomadaire<small>21 août — 3 exp</small></div><div class="bar"><i style="width:51%"></i></div><div class="ev">+2.18B</div></div>
-        <div class="exprow"><div class="en">Mensuel<small>18 sept — 31 exp</small></div><div class="bar"><i style="width:9%"></i></div><div class="ev">+0.39B</div></div>
-        <div class="exprow"><div class="en">Trimestriel<small>18 déc — 122 exp</small></div><div class="bar"><i style="width:0%; background:linear-gradient(90deg,#b23a44,#cf5560);"></i></div><div class="ev" style="color:#cf5560;">-0.15B</div></div>
-        <div class="exprow"><div class="en">LEAPS<small>16 jan 2026 — 151 exp</small></div><div class="bar"><i style="width:23%"></i></div><div class="ev">+1.0B</div></div>
-        <div class="keyline">CLÉ : domination hebdomadaire (<b>2.18B</b>) → pinning fort vendredi. Frein modéré à la hausse, coussin solide à la baisse. Le flux frais haussier (<b>30,010–30,000</b>) renforce la dérive vers <b>30,000</b> tant que <b>30,010</b> tient. 0DTE utilisable <b>vendredi uniquement</b> (expirations hebdomadaires actives). Rester prudent jeudi soir sur la dynamique de roll des positions.</div>
+        <div class="exprow"><div class="en">0DTE<small>18 août</small></div><div class="bar"><i style="width:15%"></i></div><div class="ev" style="color:var(--red);">-1,59B</div></div>
+        <div class="exprow"><div class="en">Hebdomadaire<small>21 août</small></div><div class="bar"><i style="width:51%"></i></div><div class="ev">+0,26B</div></div>
+        <div class="exprow"><div class="en">Mensuel<small>18 sept</small></div><div class="bar"><i style="width:21%"></i></div><div class="ev" style="color:var(--red);">-0,15B</div></div>
+        <div class="exprow"><div class="en">Trimestriel<small>18 déc</small></div><div class="bar"><i style="width:5%"></i></div><div class="ev" style="color:var(--red);">-0,28B</div></div>
+        <div class="exprow"><div class="en">LEAPS<small>long terme</small></div><div class="bar"><i style="width:21%"></i></div><div class="ev">+0,70B</div></div>
+        <div class="keyline">CLÉ : Le <b>0DTE est fortement négatif (-1,59 Md$)</b>, ce qui amplifie les mouvements intraday. Le GEX hebdomadaire est légèrement positif, mais le GEX mensuel et trimestriel sont négatifs. Les dealers sont short gamma, ce qui signifie qu'ils vont amplifier les mouvements. Le chemin de moindre résistance est baissier tant que <b>29,570</b> n'est pas reclaimé.</div>
       </div>
     </div>
     <div class="ptag">Page 5 / 6</div>
@@ -279,34 +274,34 @@
         <tr><th style="width:14%">Scénario</th><th style="width:24%">Déclencheur</th><th style="width:28%">Triggers Price Action</th><th style="width:18%">Zones Cibles</th><th style="width:16%">Posture</th></tr>
       </thead>
       <tbody>
-        <tr class="rowg">
-          <td><span class="scn">HAUSSIER</span></td>
-          <td>Le spot tient au-dessus de 30,010. Flux frais haussier + gravitational pull 30,000 (expiry).</td>
-          <td>Repli sur 30,010 qui rebondit. Reclaim EMA/VWAP + retest qui tient. Momentum vers le Call Wall.</td>
-          <td>30,000 → 30,300, ext. 30,450.</td>
-          <td>Acheter les replis. Scénario privilégié cette semaine. Pinning 30k vendredi.</td>
+        <tr class="rowr">
+          <td><span class="scn">BAISSIER</span></td>
+          <td>Le spot reste sous 29,570. Régime d'amplification confirmé. Flux frais baissier.</td>
+          <td>Rejet sous 29,570. Cassure de 29,350 avec volume. Échec de reclaim EMA/VWAP.</td>
+          <td>29,350 → 29,200 (Max Pain), ext. 29,100 (Put Wall).</td>
+          <td>Vendre les rallies. Scénario privilégié. Attendre des mouvements étendus.</td>
         </tr>
         <tr class="rown">
           <td><span class="scn">RANGE</span></td>
-          <td>Marché en attente pre-expiry. Dampening fort, pas de catalyseur macro.</td>
-          <td>Rotation 29,400–30,450. Rejets nets aux bords. Volume en baisse.</td>
-          <td>Canal 29,400 – 30,450.</td>
-          <td>Fade les bords. Milieu = attendre. Attentif au roll jeudi soir.</td>
+          <td>Marché en attente. Pas de catalyseur macro. Le spot oscille autour de 29,400.</td>
+          <td>Rotation 29,350–29,570. Rejets nets aux bords. Volume en baisse.</td>
+          <td>Canal 29,350 – 29,570.</td>
+          <td>Fade les bords. Milieu = attendre.</td>
         </tr>
-        <tr class="rowr">
-          <td><span class="scn">BAISSIER</span></td>
-          <td>Cassure nette de 30,010 (clôture + volume). Bascule en régime d'amplification. Catalyseur macro inattendu.</td>
-          <td>Échec sous le pivot, momentum vendeur. Échec de reclaim 30,010. Pas de fade.</td>
-          <td>29,600 → 29,400, puis 29,000.</td>
-          <td>Suivre le momentum. Ne pas acheter le couteau. Réévaluer sur 29,400.</td>
+        <tr class="rowg">
+          <td><span class="scn">HAUSSIER</span></td>
+          <td>Cassure nette de 29,570 (clôture + volume). Bascule en régime de dampening.</td>
+          <td>Reclaim de 29,570, momentum acheteur. Reclaim EMA/VWAP + retest qui tient.</td>
+          <td>29,570 → 29,800, ext. 30,000 (Call Wall).</td>
+          <td>Acheter les cassures. Scénario secondaire. Confirmer le reclaim du pivot.</td>
         </tr>
       </tbody>
     </table>
-    <div class="skip"><b>SKIP MARDI SI&nbsp;:</b> gap d'ouverture sous 29,000 OU au-dessus de 30,450 dans les 30 premières minutes — niveaux temporairement non fiables, attendre un nouvel équilibre. En <b>Expiry Week</b>, les mouvements intraday autour des strikes majeurs (29,000 / 30,000) peuvent être plus volatils que d'ordinaire. Rafraîchir LevelBrief avant l'ouverture pour confirmer les niveaux mis à jour. Vendredi : traiter en mode 0DTE uniquement après avoir identifié le pinning dominant.</div>
+    <div class="skip"><b>SKIP MARDI SI&nbsp;:</b> gap d'ouverture au-dessus de 29,800 OU sous 29,000 dans les 30 premières minutes — niveaux temporairement non fiables, attendre un nouvel équilibre. Le <b>0DTE négatif</b> peut entraîner des mouvements intraday très rapides. Rafraîchir LevelBrief avant l'ouverture pour confirmer les niveaux mis à jour.</div>
     <div class="ptag">Page 6 / 6</div>
   </section>
 
 </div>
-<div class="disclaimer">Recréé à partir des niveaux LevelBrief estimés au lundi 17 août 2026 · niveaux NDX (ajouter le basis NQ) · données CBOE différées ~15 min · à des fins éducatives uniquement, ceci n'est pas un conseil en investissement · le rafraîchissement de mardi matin prime sur ce document · en Expiry Week, valider les niveaux avant chaque session.</div>
+<div class="disclaimer">Recréé à partir des niveaux LevelBrief estimés au lundi 17 août 2026 · niveaux NDX (ajouter le basis NQ) · données CBOE différées ~15 min · à des fins éducatives uniquement, ceci n'est pas un conseil en investissement · le rafraîchissement de mardi matin prime sur ce document.</div>
 </body>
 </html>
