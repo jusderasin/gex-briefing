@@ -43,14 +43,14 @@
 
   .two{display:grid; grid-template-columns:1fr 1fr; gap:26px;}
   .col h3{font-family:'Playfair Display',serif; font-weight:800; font-size:26px; margin-bottom:4px;}
-  .thesis{font-family:'Playfair Display',serif; font-weight:800; font-size:30px; color:var(--green); margin:2px 0 18px;}
-  .callout{background:var(--green); color:#fff; border:2px solid #20603f; padding:18px 20px; border-radius:4px; font-weight:700; font-size:18px; line-height:1.35; letter-spacing:.3px;}
+  .thesis{font-family:'Playfair Display',serif; font-weight:800; font-size:30px; color:var(--red); margin:2px 0 18px;}
+  .callout{background:var(--red); color:#fff; border:2px solid #8f2d35; padding:18px 20px; border-radius:4px; font-weight:700; font-size:18px; line-height:1.35; letter-spacing:.3px;}
   .mlabel{font-family:'JetBrains Mono',monospace; font-size:12px; letter-spacing:2px; color:var(--mutedlight); margin:22px 0 10px; text-transform:uppercase;}
   .col p{font-size:15px; line-height:1.6; color:#3a4456;}
-  .ring{width:210px; height:210px; border-radius:50%; border:26px solid #a9c6b5; margin:6px auto 0; display:flex; align-items:center; justify-content:center;}
+  .ring{width:210px; height:210px; border-radius:50%; border:26px solid #e3bcc0; margin:6px auto 0; display:flex; align-items:center; justify-content:center;}
   .ring span{font-weight:700; font-size:17px; color:#2a3346;}
   .ringlbls{display:flex; justify-content:space-between; max-width:230px; margin:8px auto 0; font-size:12px; color:var(--mutedlight);}
-  .ivbox{background:var(--greenbg); border:1px solid var(--greenline); border-radius:7px; padding:14px 18px; font-weight:700; font-size:17px; color:#243049; margin-top:20px;}
+  .ivbox{background:var(--redbg); border:1px solid var(--redline); border-radius:7px; padding:14px 18px; font-weight:700; font-size:17px; color:#243049; margin-top:20px;}
   .notebox{background:#eef2f7; border:1px solid #d7dfe9; border-radius:7px; padding:14px 18px; font-size:13.5px; line-height:1.55; color:#465062; margin-top:14px;}
 
   .metrics{display:grid; grid-template-columns:repeat(4,1fr); gap:18px;}
@@ -61,7 +61,7 @@
   .mv.g{color:#4cba7e;} .mv.a{color:#d9a72c;} .mv.r{color:#cf5560;} .mv.n{color:#6b7689;}
   .shift{margin:24px 0; background:#161e2e; border:1px solid #2c3850; border-radius:10px; padding:18px 22px;}
   .shift .sh{font-family:'JetBrains Mono',monospace; font-size:13px; letter-spacing:1px;}
-  .shift .sh b{color:#4cba7e;}
+  .shift .sh b{color:#cf5560;}
   .shift .sd{font-size:13.5px; color:#9aa6bd; margin-top:8px; line-height:1.5;}
   .gilabel{font-family:'JetBrains Mono',monospace; font-size:12px; letter-spacing:2px; color:#8a97ad; text-transform:uppercase; margin-bottom:12px;}
   .indices{display:grid; grid-template-columns:repeat(4,1fr); gap:14px;}
@@ -152,12 +152,12 @@
   <section class="page dark cover">
     <div class="statusbar">STATUS: PRE-MARKET&nbsp;&nbsp;//&nbsp;&nbsp;TICKER: NQ&nbsp;&nbsp;//&nbsp;&nbsp;DATE: 24 AOÛT 2026</div>
     <h1>NQ Pre-Market Briefing</h1>
-    <div class="sub">Gamma Négatif &amp; Régime d'Amplification — Pivot 29,070</div>
+    <div class="sub">Net Gamma Négatif &amp; Régime d'Amplification — Pivot 29,070</div>
     <div class="coveraccent"></div>
     <div class="badges">
-      <span class="badge warn">GAMMA NÉGATIF</span>
+      <span class="badge warn">NET GAMMA NÉGATIF</span>
       <span class="badge on">AMPLIFICATION</span>
-      <span class="badge">TENDANCE</span>
+      <span class="badge">VOLATILITÉ ACCRUE</span>
       <span class="badge">FLUX BAISSIER</span>
     </div>
     <div class="src">DATA SOURCE: LEVELBRIEF (NDX) //<br>MAJ LUNDI 24/08 08:00 GMT</div>
@@ -170,17 +170,17 @@
       <div class="col">
         <div class="eyebrow">The Bottom Line</div>
         <h3>CORE THESIS&nbsp;:</h3>
-        <div class="thesis" style="color:var(--red);">RANGE BAISSIER / AMPLIFICATION</div>
-        <div class="callout" style="background:var(--red); border-color:#8e2c34;">SHORTS FAVORISÉS SOUS 29,070.<br>LONGS SI RECLAIM NET DU PIVOT + VOLUME.</div>
+        <div class="thesis">RANGE BAISSIER / AMPLIFICATION</div>
+        <div class="callout">SHORTS FAVORISÉS SOUS 29,070.<br>LONGS SI RECLAIM NET DU PIVOT + VOLUME.</div>
         <div class="mlabel">Microstructure</div>
-        <p>NQ traite autour de <b>28,992.04 (NDX)</b>, soit <b>-77.96 pts sous le pivot à 29,070</b> — le régime d'amplification est confirmé. Gamma net <b>-1.61 Md$</b> : les mouvements seront amplifiés, avec une expansion de la volatilité. Les dealers sont vendeurs de gamma, ils achètent les hausses et vendent les baisses, ce qui prolonge les mouvements. Les zones de flux forcé sont <b>28,600 (Put Wall) et 29,600 (Call Wall)</b>. Une reprise de 29,070 ferait basculer le régime en amortissement.</p>
+        <p>NQ traite autour de <b>29,089.01 (NDX)</b>, soit <b>légèrement au-dessus du pivot à 29,070</b>. Le régime est "Net gamma negative" mais le spot est au-dessus du pivot, ce qui signifie que le régime d'amplification n'est pas encore confirmé. Une perte de 29,070 confirmerait le régime de gamma court / expansion de la volatilité. Le maintien au-dessus maintient la structure en transition. Le GEX net est de <b>-1.04 Md$</b>. Le flux frais montre un intérêt pour les calls à 29,220 et 29,100, mais aussi des puts importants à 29,000 et 28,650. Les dealers sont susceptibles de vendre en cas de hausse et d'acheter en cas de baisse, amplifiant les mouvements.</p>
       </div>
       <div class="col">
         <div class="eyebrow">The Risk Engine</div>
-        <div class="ring" style="border-color:#e3bcc0;"><span>Trend Risk</span></div>
+        <div class="ring"><span>Vol-Expansion Risk</span></div>
         <div class="ringlbls"><span>Range-Bound</span><span>Breakout</span></div>
-        <div class="ivbox" style="background:var(--redbg); border-color:var(--redline); color:#6e2126;">IV30&nbsp; 19,27% &nbsp;→&nbsp; vol en expansion (environnement volatile)</div>
-        <div class="notebox">Skew IV +3,24% côté puts : la protection reste recherchée, indiquant une prudence du marché. Net GEX en territoire négatif (-1.61 Md$) : le régime d'amplification est bien établi, favorisant l'extension des tendances. Le marché est sensible aux cassures de niveaux clés.</div>
+        <div class="ivbox">IV30&nbsp; 18.96% &nbsp;→&nbsp; vol modérée (potentiel d'expansion)</div>
+        <div class="notebox">Le skew IV est nul, indiquant une absence de biais directionnel fort sur la volatilité implicite. Le GEX net négatif (-1.04 Md$) suggère que les mouvements de prix seront amplifiés par l'activité de hedging des dealers. La bande de couverture des dealers est large (28,650–29,600), indiquant une zone où les mouvements pourraient être plus prononcés. Le marché est en transition, mais une cassure sous le pivot 29,070 pourrait rapidement déclencher une expansion de la volatilité.</div>
       </div>
     </div>
     <div class="ptag">Page 2 / 6</div>
@@ -191,14 +191,14 @@
     <h2 class="title">Conviction Matrix &amp; Risk Tone</h2>
     <div class="accent"></div>
     <div class="metrics">
-      <div class="metric"><div class="ml">Momentum</div><div class="mv r">4/5</div><div class="md">Flux frais baissier 28,900–28,650</div></div>
-      <div class="metric"><div class="ml">Options</div><div class="mv r">4/5</div><div class="md">Gamma- en baisse, skew put élevé</div></div>
-      <div class="metric"><div class="ml">Volatility</div><div class="mv r">3/5</div><div class="md">IV 19,27% – en expansion</div></div>
-      <div class="metric"><div class="ml">Expiry Risk</div><div class="mv n">1/5</div><div class="md">Pas d'expiry majeure cette semaine</div></div>
+      <div class="metric"><div class="ml">Momentum</div><div class="mv r">2/5</div><div class="md">Spot au-dessus du pivot, mais régime négatif</div></div>
+      <div class="metric"><div class="ml">Options</div><div class="mv r">1/5</div><div class="md">Net gamma négatif, vol-expansion</div></div>
+      <div class="metric"><div class="ml">Volatility</div><div class="mv a">3/5</div><div class="md">IV 18.96% – modérée, potentiel d'expansion</div></div>
+      <div class="metric"><div class="ml">Expiry Risk</div><div class="mv n">1/5</div><div class="md">0DTE négatif, hebdomadaire négatif</div></div>
     </div>
     <div class="shift">
-      <div class="sh">GEX SHIFT : <b>-1.61 Md$ / 1%</b> &nbsp;(↓ vs neutre) &nbsp;→&nbsp; short gamma renforcé · amplification</div>
-      <div class="sd">Le pivot est à 29,070. Bande de couverture : 28,600–29,600. Le flux frais montre un intérêt sur 28,900 et 28,650, indiquant un positionnement baissier actif. Les niveaux sont fiables tant que le spot reste sous 29,070. Risque de volatilité accrue en cas de cassure des murs de gamma.</div>
+      <div class="sh">GEX SHIFT : <b>-1.04 Md$</b> &nbsp;→&nbsp; short gamma · amplification</div>
+      <div class="sd">Le spot est au-dessus du pivot 29,070, mais le régime est "Net gamma negative". Une perte de 29,070 confirmerait le régime de gamma court / expansion de la volatilité. Le maintien au-dessus maintient la structure en transition. La bande de couverture des dealers est de 28,650–29,600. Le flux frais montre un mélange d'intérêt call et put autour des niveaux actuels.</div>
     </div>
     <div class="gilabel">Indices Globaux (à actualiser lundi avant ouverture)</div>
     <div class="indices">
@@ -216,27 +216,19 @@
     <div class="accent"></div>
     <div class="laddwrap">
       <div class="ladder">
-        <div class="rung"><div class="lv grey">30200.0</div><div class="dot grey"></div><div class="ds">Flux frais (0.02x)</div></div>
-        <div class="rung"><div class="lv grey">30000.0</div><div class="dot grey"></div><div class="ds">Flux frais (0.03x)</div></div>
-        <div class="rung"><div class="lv grey">29650.0</div><div class="dot grey"></div><div class="ds">Strike GEX (+0.30B)</div></div>
-        <div class="rung"><div class="lv green">29600.0</div><div class="dot green"></div><div class="ds"><b>Hedging Band HI</b> — Borne haute de la bande de couverture</div></div>
-        <div class="rung"><div class="lv grey">29500.0</div><div class="dot grey"></div><div class="ds">Flux frais (0.05x)</div></div>
-        <div class="rung"><div class="lv grey">29300.0</div><div class="dot grey"></div><div class="ds">Flux frais (0.56x)</div></div>
-        <div class="rung"><div class="lv green">29275.0</div><div class="dot green"></div><div class="ds"><b>Call Wall (OI 3456)</b> — Résistance majeure</div></div>
-        <div class="rung"><div class="lv green">29250.0</div><div class="dot green"></div><div class="ds"><b>Max Pain</b></div></div>
-        <div class="rung"><div class="lv grey">29100.0</div><div class="dot grey"></div><div class="ds">Flux frais (0.9x)</div></div>
-        <div class="rung"><div class="lv grey">29075.0</div><div class="dot grey"></div><div class="ds">Strike GEX (+0.23B)</div></div>
-        <div class="rung"><div class="lv amber">29070.0</div><div class="dot amber"></div><div class="ds"><b>GAMMA FLIP / PIVOT CRUCIAL</b></div></div>
-        <div class="rung"><div class="lv blue">28992.04</div><div class="dot blue"></div><div class="ds"><b>SPOT</b> — Référence (clôture)</div></div>
-        <div class="rung"><div class="lv grey">29000.0</div><div class="dot grey"></div><div class="ds">Flux frais (0.36x)</div></div>
-        <div class="rung"><div class="lv grey">28900.0</div><div class="dot grey"></div><div class="ds">Flux frais (1.31x) — Zone de construction put active</div></div>
-        <div class="rung"><div class="lv red">28650.0</div><div class="dot red"></div><div class="ds"><b>Hedging Band LO</b> — Borne basse de la bande de couverture</div></div>
-        <div class="rung"><div class="lv grey">28500.0</div><div class="dot grey"></div><div class="ds">Flux frais (0.16x)</div></div>
-        <div class="rung"><div class="lv red">28000.0</div><div class="dot red"></div><div class="ds"><b>Put Wall (OI 3481)</b> — Support majeur</div></div>
-        <div class="rung"><div class="lv grey">27800.0</div><div class="dot grey"></div><div class="ds">Strike GEX (-0.12B)</div></div>
+        <div class="rung"><div class="lv green">29600</div><div class="dot green"></div><div class="ds"><b>Hedging Band HI</b> — Borne haute de la bande de couverture des dealers</div></div>
+        <div class="rung"><div class="lv green">29275</div><div class="dot green"></div><div class="ds"><b>Call Wall (OI 3456) + Max Pain</b> — Résistance majeure</div></div>
+        <div class="rung"><div class="lv grey">29220</div><div class="dot grey"></div><div class="ds">Flux frais call (ratio 2.37) — Zone d'intérêt acheteur</div></div>
+        <div class="rung"><div class="lv grey">29100</div><div class="dot grey"></div><div class="ds">Flux frais call (ratio 1.31) — Résistance intermédiaire</div></div>
+        <div class="rung"><div class="lv blue">29089.01</div><div class="dot blue"></div><div class="ds"><b>SPOT</b> — Référence actuelle</div></div>
+        <div class="rung"><div class="lv amber">29070</div><div class="dot amber"></div><div class="ds"><b>GAMMA FLIP</b> — Pivot crucial pour le régime</div></div>
+        <div class="rung"><div class="lv grey">29050</div><div class="dot grey"></div><div class="ds">Flux frais call (ratio 1.18) — Support intermédiaire</div></div>
+        <div class="rung"><div class="lv grey">29000</div><div class="dot grey"></div><div class="ds">Strike GEX (-0.36B) — Support important</div></div>
+        <div class="rung"><div class="lv green">28650</div><div class="dot green"></div><div class="ds"><b>Hedging Band LO</b> — Borne basse de la bande de couverture des dealers</div></div>
+        <div class="rung"><div class="lv green">28000</div><div class="dot green"></div><div class="ds"><b>Put Wall (OI 3441)</b> — Support majeur structurel</div></div>
       </div>
-      <div class="zone up" style="background:var(--greenbg); border-color:var(--greenline); color:var(--green);">Zone de dampening<br>(au-dessus du pivot)</div>
-      <div class="zone down" style="background:var(--redbg); border-color:var(--redline); color:var(--red);">Zone d'amplification<br>+ flux frais baissier<br>(sous le pivot)</div>
+      <div class="zone up">Zone de dampening<br>(au-dessus du pivot)<br>Régime en transition</div>
+      <div class="zone down">Zone d'amplification<br>(sous 29,070)<br>Volatilité accrue</div>
     </div>
     <div class="ptag">Page 4 / 6</div>
   </section>
@@ -250,22 +242,22 @@
       <div>
         <div class="exptitle">Carte d'action des dealers (prochain ±1%)</div>
         <div class="dcard" style="margin-bottom:18px;">
-          <div class="dh red">PRIX MONTE&nbsp;→&nbsp;+1%</div>
-          <div class="db"><div class="dbig r">3.44 Md$</div><div class="dsmall">DEALERS VENDENT</div><p style="margin-top:10px;">Les dealers sont short gamma. Ils vendront les rallies pour couvrir leurs positions, ce qui amplifiera la pression à la baisse si le prix tente de remonter. La résistance à 29,275 est significative.</p></div>
+          <div class="dh green">PRIX MONTE&nbsp;→&nbsp;+1%</div>
+          <div class="db"><div class="dbig g">3.23 Md$</div><div class="dsmall">DEALERS VENDENT</div><p style="margin-top:10px;">Les dealers vendront pour couvrir leurs positions en cas de hausse, ce qui pourrait créer une résistance. Le Call Wall à 29,275 est une zone clé où cette action pourrait être amplifiée.</p></div>
         </div>
         <div class="dcard">
-          <div class="dh green">PRIX BAISSE&nbsp;→&nbsp;−1%</div>
-          <div class="db"><div class="dbig g">1.82 Md$</div><div class="dsmall">DEALERS ACHÈTENT</div><p style="margin-top:10px;">Les dealers achèteront les dips pour couvrir leurs positions short gamma, ce qui peut temporairement amortir la baisse, mais le régime d'amplification favorise l'extension des mouvements. Le support à 28,000 est un Put Wall important.</p></div>
+          <div class="dh red">PRIX BAISSE&nbsp;→&nbsp;−1%</div>
+          <div class="db"><div class="dbig r">2.20 Md$</div><div class="dsmall">DEALERS ACHÈTENT</div><p style="margin-top:10px;">Les dealers achèteront pour couvrir leurs positions en cas de baisse, ce qui pourrait amplifier la chute. La perte du gamma flip à 29,070 serait un déclencheur important.</p></div>
         </div>
       </div>
       <div>
         <div class="exptitle">GEX par expiration</div>
-        <div class="exprow"><div class="en">0DTE<small>24 août</small></div><div class="bar"><i style="width:29%; background:linear-gradient(90deg,#b23a44,#cf5560);"></i></div><div class="ev" style="color:#cf5560;">-1.26B</div></div>
-        <div class="exprow"><div class="en">Hebdomadaire<small>29 août</small></div><div class="bar"><i style="width:17%; background:linear-gradient(90deg,#b23a44,#cf5560);"></i></div><div class="ev" style="color:#cf5560;">-0.73B</div></div>
-        <div class="exprow"><div class="en">Mensuel<small>19 sept</small></div><div class="bar"><i style="width:9%; background:linear-gradient(90deg,#2f7d56,#4cba7e);"></i></div><div class="ev" style="color:#4cba7e;">0.41B</div></div>
-        <div class="exprow"><div class="en">Trimestriel<small>19 déc</small></div><div class="bar"><i style="width:12%; background:linear-gradient(90deg,#b23a44,#cf5560);"></i></div><div class="ev" style="color:#cf5560;">-0.51B</div></div>
-        <div class="exprow"><div class="en">LEAPS<small>long terme</small></div><div class="bar"><i style="width:11%; background:linear-gradient(90deg,#2f7d56,#4cba7e);"></i></div><div class="ev" style="color:#4cba7e;">0.47B</div></div>
-        <div class="keyline">CLÉ : Le GEX 0DTE et hebdomadaire est fortement négatif, ce qui indique une <b>volatilité accrue et une amplification des mouvements</b> pour la journée et la semaine. Les dealers sont short gamma, ce qui signifie qu'ils vont amplifier les tendances. Le flux frais baissier sur 28,900 et 28,650 renforce la pression à la baisse.</div>
+        <div class="exprow"><div class="en">0DTE<small>24 août — 0 exp</small></div><div class="bar"><i style="width:25%"></i></div><div class="ev">-1.25B</div></div>
+        <div class="exprow"><div class="en">Hebdomadaire<small>28 août — 4 exp</small></div><div class="bar"><i style="width:11%"></i></div><div class="ev">-0.55B</div></div>
+        <div class="exprow"><div class="en">Mensuel<small>18 sept — 18 exp</small></div><div class="bar"><i style="width:12%"></i></div><div class="ev">0.59B</div></div>
+        <div class="exprow"><div class="en">Trimestriel<small>18 déc — 116 exp</small></div><div class="bar"><i style="width:7%"></i></div><div class="ev">-0.34B</div></div>
+        <div class="exprow"><div class="en">LEAPS<small>19 déc 2027 — 482 exp</small></div><div class="bar"><i style="width:10%"></i></div><div class="ev">0.51B</div></div>
+        <div class="keyline">CLÉ : Le <b>0DTE et l'hebdomadaire sont fortement négatifs</b>, ce qui indique un potentiel d'amplification des mouvements intraday et sur la semaine. Le GEX mensuel et LEAPS sont positifs, offrant un certain amortissement à plus long terme. Le régime "Net gamma negative" combiné à la position du spot juste au-dessus du gamma flip à <b>29,070</b> rend la journée volatile. Une cassure sous ce niveau pourrait déclencher une accélération baissière.</div>
       </div>
     </div>
     <div class="ptag">Page 5 / 6</div>
@@ -282,28 +274,28 @@
       <tbody>
         <tr class="rowr">
           <td><span class="scn">BAISSIER</span></td>
-          <td>Le spot reste sous 29,070. Flux frais baissier + régime d'amplification.</td>
-          <td>Rejet sous 29,070, momentum vendeur. Échec de reclaim EMA/VWAP.</td>
-          <td>28,900 → 28,650, ext. 28,000.</td>
-          <td>Vendre les rallies. Scénario privilégié. Attentif aux cassures de supports.</td>
+          <td>Le spot casse et tient sous 29,070. Régime d'amplification confirmé.</td>
+          <td>Cassure nette de 29,070 avec volume. Échec de reclaim du pivot. Momentum vendeur.</td>
+          <td>29,000 → 28,650, ext. 28,000.</td>
+          <td>Suivre le momentum. Ne pas acheter le couteau. Réévaluer sur 28,650.</td>
         </tr>
         <tr class="rown">
           <td><span class="scn">RANGE</span></td>
-          <td>Le spot oscille autour de 29,070 sans cassure nette.</td>
-          <td>Rotation 28,900–29,100. Rejets aux bords. Volume en baisse.</td>
-          <td>Canal 28,900 – 29,100.</td>
-          <td>Fade les bords. Milieu = attendre.</td>
+          <td>Le spot oscille autour de 29,070 sans direction claire. Régime en transition.</td>
+          <td>Rotation 29,000–29,275. Rejets nets aux bords. Volume en baisse.</td>
+          <td>Canal 29,000 – 29,275.</td>
+          <td>Fade les bords. Milieu = attendre. Attentif à la confirmation du régime.</td>
         </tr>
         <tr class="rowg">
           <td><span class="scn">HAUSSIER</span></td>
-          <td>Cassure nette de 29,070 (clôture + volume). Bascule en régime de dampening.</td>
-          <td>Reclaim du pivot, momentum acheteur. Reclaim EMA/VWAP + retest qui tient.</td>
-          <td>29,100 → 29,275, puis 29,600.</td>
-          <td>Suivre le momentum. Ne pas acheter le couteau. Réévaluer sur 29,275.</td>
+          <td>Le spot maintient 29,070 et casse 29,275. Régime de dampening (improbable).</td>
+          <td>Reclaim net de 29,070 avec volume. Cassure de 29,275.</td>
+          <td>29,275 → 29,600.</td>
+          <td>Acheter les replis sur 29,070 si confirmation. Scénario moins probable.</td>
         </tr>
       </tbody>
     </table>
-    <div class="skip"><b>SKIP LUNDI SI&nbsp;:</b> gap d'ouverture sous 28,000 OU au-dessus de 29,600 dans les 30 premières minutes — niveaux temporairement non fiables, attendre un nouvel équilibre. En <b>régime d'amplification</b>, les mouvements peuvent être rapides et violents. Rafraîchir LevelBrief avant l'ouverture pour confirmer les niveaux mis à jour.</div>
+    <div class="skip"><b>SKIP LUNDI SI&nbsp;:</b> gap d'ouverture sous 28,650 OU au-dessus de 29,600 dans les 30 premières minutes — niveaux temporairement non fiables, attendre un nouvel équilibre. Le régime "Net gamma negative" implique une <b>volatilité accrue</b> et des mouvements amplifiés, surtout si le spot casse le gamma flip. Rafraîchir LevelBrief avant l'ouverture pour confirmer les niveaux mis à jour.</div>
     <div class="ptag">Page 6 / 6</div>
   </section>
 
