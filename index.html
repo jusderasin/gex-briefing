@@ -54,7 +54,7 @@
   .notebox{background:#eef2f7; border:1px solid #d7dfe9; border-radius:7px; padding:14px 18px; font-size:13.5px; line-height:1.55; color:#465062; margin-top:14px;}
 
   .metrics{display:grid; grid-template-columns:repeat(4,1fr); gap:18px;}
-  .metric{background:var(--card); border:1:px solid var(--cardline); border-radius:11px; padding:20px;}
+  .metric{background:var(--card); border:1px solid var(--cardline); border-radius:11px; padding:20px;}
   .metric .ml{font-family:'JetBrains Mono',monospace; font-size:12px; letter-spacing:2px; color:#8a97ad; text-transform:uppercase;}
   .metric .mv{font-family:'Playfair Display',serif; font-weight:800; font-size:46px; margin:6px 0 8px;}
   .metric .md{font-size:13px; color:#9aa6bd;}
@@ -155,24 +155,27 @@
     <div class="sub">
       <!-- Thèse basée sur le régime et la position du spot vs gamma_flip/walls -->
       <!-- Si régime est null, on met une thèse neutre -->
-      <!-- Si spot est au-dessus du gamma_flip et régime est dampening, on met "Positive Gamma & Dampening Regime" -->
-      <!-- Si spot est en dessous du gamma_flip et régime est amplification, on met "Negative Gamma & Amplification Regime" -->
-      <!-- Si spot est entre gamma_flip et call_wall/put_wall, on peut affiner -->
-      <!-- Ici, toutes les données sont null, donc on met une thèse neutre -->
-      Régime Neutre — Niveaux à surveiller
+      <!-- Si spot est null, on met une thèse neutre -->
+      <!-- Si gamma_flip est null, on met une thèse neutre -->
+      <!-- Si call_wall est null, on met une thèse neutre -->
+      <!-- Si put_wall est null, on met une thèse neutre -->
+      <!-- Si regime est "dampening" et spot > gamma_flip, alors "Positive Gamma & Dampening Regime" -->
+      <!-- Si regime est "amplification" et spot < gamma_flip, alors "Negative Gamma & Amplification Regime" -->
+      <!-- Si regime est "dampening" et spot < gamma_flip, alors "Dampening Regime & Risk of Flip" -->
+      <!-- Si regime est "amplification" et spot > gamma_flip, alors "Amplification Regime & Risk of Flip" -->
+      <!-- Si regime est null, on met "Régime Indéterminé" -->
+      <!-- Si spot, gamma_flip, call_wall, put_wall sont null, on met "Niveaux Clés Indéterminés" -->
+      Régime Indéterminé — Niveaux Clés Indéterminés
     </div>
     <div class="coveraccent"></div>
     <div class="badges">
-      <!-- Badges basés sur le régime et les données -->
-      <!-- Si net_gex_bn est positif, on met POSITIVE GAMMA -->
-      <!-- Si régime est dampening, on met MEAN REVERSION -->
-      <!-- Si iv30 est élevé, on met HIGH VOLATILITY -->
-      <!-- Si iv30 est bas, on met LOW VOLATILITY -->
-      <!-- Si toutes les données sont null, on met des badges neutres -->
-      <span class="badge">GAMMA NEUTRE</span>
-      <span class="badge">RANGE-BOUND</span>
-      <span class="badge">VOLATILITÉ MODÉRÉE</span>
-      <span class="badge">FLUX NEUTRE</span>
+      <!-- Badges basés sur le régime et la position du spot vs gamma_flip/walls -->
+      <!-- Si net_gex_bn est null, on met "GEX INDÉTERMINÉ" -->
+      <span class="badge">GEX INDÉTERMINÉ</span>
+      <!-- Si regime est null, on met "RÉGIME INDÉTERMINÉ" -->
+      <span class="badge">RÉGIME INDÉTERMINÉ</span>
+      <span class="badge">EXPIRY WEEK</span>
+      <span class="badge">FLUX INDÉTERMINÉ</span>
     </div>
     <div class="src">DATA SOURCE: LEVELBRIEF (NDX) //<br>MAJ LUNDI 19/10 18:30 GMT</div>
     <div class="ptag">Page 1 / 6</div>
@@ -184,22 +187,41 @@
       <div class="col">
         <div class="eyebrow">The Bottom Line</div>
         <h3>CORE THESIS&nbsp;:</h3>
-        <!-- Thèse basée sur le régime et la position du spot vs gamma_flip/walls -->
-        <!-- Si régime est null, on met une thèse neutre -->
-        <!-- Si spot est au-dessus du gamma_flip et régime est dampening, on met "RANGE HAUSSIER / DAMPENING" -->
-        <!-- Si spot est en dessous du gamma_flip et régime est amplification, on met "RANGE BAISSIER / AMPLIFICATION" -->
-        <!-- Ici, toutes les données sont null, donc on met une thèse neutre -->
-        <div class="thesis">RANGE NEUTRE / ATTENTE</div>
-        <div class="callout">SURVEILLER LES NIVEAUX CLÉS. PAS DE DIRECTION CLAIRE SANS CATALYSEUR.</div>
+        <div class="thesis">
+          <!-- Thèse basée sur le régime et la position du spot vs gamma_flip/walls -->
+          <!-- Si regime est "dampening" et spot > gamma_flip, alors "RANGE HAUSSIER / DAMPENING" -->
+          <!-- Si regime est "amplification" et spot < gamma_flip, alors "RANGE BAISSIER / AMPLIFICATION" -->
+          <!-- Si regime est "dampening" et spot < gamma_flip, alors "RANGE NEUTRE / DAMPENING AVEC RISQUE" -->
+          <!-- Si regime est "amplification" et spot > gamma_flip, alors "RANGE NEUTRE / AMPLIFICATION AVEC RISQUE" -->
+          <!-- Si regime est null, on met "RÉGIME INDÉTERMINÉ" -->
+          RÉGIME INDÉTERMINÉ
+        </div>
+        <div class="callout">
+          <!-- Callout basé sur la thèse -->
+          <!-- Si thèse est "RANGE HAUSSIER / DAMPENING", alors "LONGS FAVORISÉS AU-DESSUS DE [gamma_flip]. SHORTS SI CASSURE NETTE DU PIVOT + VOLUME." -->
+          <!-- Si thèse est "RANGE BAISSIER / AMPLIFICATION", alors "SHORTS FAVORISÉS EN-DESSOUS DE [gamma_flip]. LONGS SI REPRISE NETTE DU PIVOT + VOLUME." -->
+          <!-- Si thèse est "RANGE NEUTRE / DAMPENING AVEC RISQUE", alors "ATTENTE. MARCHÉ SENSIBLE AU PIVOT [gamma_flip]. RISQUE DE VOLATILITÉ." -->
+          <!-- Si thèse est "RANGE NEUTRE / AMPLIFICATION AVEC RISQUE", alors "ATTENTE. MARCHÉ SENSIBLE AU PIVOT [gamma_flip]. RISQUE DE VOLATILITÉ." -->
+          <!-- Si thèse est "RÉGIME INDÉTERMINÉ", alors "ATTENTE. NIVEAUX CLÉS À CONFIRMER." -->
+          ATTENTE. NIVEAUX CLÉS À CONFIRMER.
+        </div>
         <div class="mlabel">Microstructure</div>
-        <p>NQ traite autour de <b class="spot-value">—</b> (NDX). Les données actuelles ne fournissent pas de direction claire. Le régime est <b class="regime-value">—</b>, suggérant <b class="regime-description">—</b>. Le Gamma net est de <b class="net-gex-value">—</b> Md$, indiquant <b class="gamma-description">—</b>. Les flux frais sont <b class="fresh-flow-description">—</b>. Les dealers sont <b class="dealer-action-description">—</b>.</p>
+        <p>
+          <!-- Texte basé sur les données -->
+          <!-- Si spot, gamma_flip, net_gex_bn, fresh_flow sont null, on met un texte générique -->
+          NQ traite autour de — (NDX). Gamma net — : régime indéterminé. Le flux frais est indéterminé. Dealers indéterminés.
+        </p>
       </div>
       <div class="col">
         <div class="eyebrow">The Risk Engine</div>
         <div class="ring"><span>Range Risk</span></div>
         <div class="ringlbls"><span>Range-Bound</span><span>Breakout</span></div>
-        <div class="ivbox">IV30&nbsp; <span class="iv30-value">—</span> &nbsp;→&nbsp; vol <span class="iv30-description">—</span></div>
-        <div class="notebox">Le Skew IV est de <span class="iv-skew-value">—</span>, indiquant <span class="iv-skew-description">—</span>. Le Net GEX est de <span class="net-gex-value-note">—</span> Md$, ce qui suggère <span class="net-gex-note-description">—</span>. Le marché est <span class="market-structure-read-value">—</span>.</div>
+        <div class="ivbox">IV30&nbsp; <!-- iv30 -->— &nbsp;→&nbsp; vol indéterminée</div>
+        <div class="notebox">
+          <!-- Texte basé sur les données -->
+          <!-- Si iv_skew, net_gex_bn sont null, on met un texte générique -->
+          Skew IV — côté puts : protection indéterminée. Net GEX — : l'amortissement est indéterminé.
+        </div>
       </div>
     </div>
     <div class="ptag">Page 2 / 6</div>
@@ -210,14 +232,18 @@
     <h2 class="title">Conviction Matrix &amp; Risk Tone</h2>
     <div class="accent"></div>
     <div class="metrics">
-      <div class="metric"><div class="ml">Momentum</div><div class="mv n">1/5</div><div class="md">Flux frais neutre</div></div>
-      <div class="metric"><div class="ml">Options</div><div class="mv n">1/5</div><div class="md">Gamma neutre, skew put neutre</div></div>
-      <div class="metric"><div class="ml">Volatility</div><div class="mv n">1/5</div><div class="md">IV — – neutre</div></div>
-      <div class="metric"><div class="ml">Expiry Risk</div><div class="mv n">1/5</div><div class="md">Pas d'expiry majeure</div></div>
+      <div class="metric"><div class="ml">Momentum</div><div class="mv n">1/5</div><div class="md">Flux frais indéterminé</div></div>
+      <div class="metric"><div class="ml">Options</div><div class="mv n">1/5</div><div class="md">Gamma indéterminé, skew indéterminé</div></div>
+      <div class="metric"><div class="ml">Volatility</div><div class="mv n">1/5</div><div class="md">IV —</div></div>
+      <div class="metric"><div class="ml">Expiry Risk</div><div class="mv n">1/5</div><div class="md">Expiry indéterminée</div></div>
     </div>
     <div class="shift">
-      <div class="sh">GEX SHIFT : <b><span class="net-gex-bn-shift">—</span> Md$ / 1%</b> &nbsp;(— vs hier) &nbsp;→&nbsp; <span class="gex-shift-description">—</span></div>
-      <div class="sd">Les niveaux clés sont à surveiller. La bande de couverture est <span class="hedging-band-lo-value">—</span>–<span class="hedging-band-hi-value">—</span>. Le flux frais est <span class="fresh-flow-description-shift">—</span>. Les niveaux sont fiables tant que le spot reste dans la bande de couverture.</div>
+      <div class="sh">GEX SHIFT : <b><!-- net_gex_bn -->— / 1%</b> &nbsp;(indéterminé) &nbsp;→&nbsp; gamma indéterminé · régime indéterminé</div>
+      <div class="sd">
+        <!-- Texte basé sur les données -->
+        <!-- Si gamma_flip, hedging_band_lo, hedging_band_hi, fresh_flow, put_wall sont null, on met un texte générique -->
+        Pivot indéterminé. Bande de couverture : —. Le flux frais est indéterminé. Expiry indéterminée.
+      </div>
     </div>
     <div class="gilabel">Indices Globaux (à actualiser mardi avant ouverture)</div>
     <div class="indices">
@@ -235,33 +261,35 @@
     <div class="accent"></div>
     <div class="laddwrap">
       <div class="ladder">
-        <!-- Les rungs doivent être triés par prix décroissant -->
-        <!-- Si une valeur est null, elle ne doit pas apparaître dans le ladder -->
-        <!-- On construit un tableau de niveaux pour trier -->
-        <!-- Chaque niveau doit avoir un strike, un type (call_wall, put_wall, etc.), et une description -->
-        <!-- Si spot est null, on ne peut pas le positionner -->
-        <!-- Si gamma_flip est null, on ne peut pas définir les zones d'amplification/dampening -->
-        <!-- Pour l'instant, toutes les données sont null, donc le ladder sera vide ou avec des placeholders -->
-        <!-- On va créer des placeholders pour chaque niveau possible -->
-        <!-- Les niveaux sont : hedging_band_hi, call_wall, fresh_flow, spot, gamma_flip, put_wall, max_pain, hedging_band_lo -->
-        <!-- On va les afficher dans l'ordre décroissant des strikes -->
+        <!-- Niveaux triés par prix décroissant -->
+        <!-- Hedging Band HI -->
+        <!-- Call Wall -->
+        <!-- Fresh Flow -->
+        <!-- Put Wall -->
+        <!-- SPOT -->
+        <!-- Gamma Flip -->
+        <!-- Max Pain -->
+        <!-- Hedging Band LO -->
+        <!-- Top Strikes -->
+        <!-- Si toutes les données sont null, on affiche un ladder vide avec des placeholders -->
+        <!-- Pour chaque niveau, on vérifie s'il est null. Si oui, on affiche "—" -->
+        <!-- On trie les niveaux par ordre décroissant -->
+        <!-- On utilise un tableau pour stocker les niveaux et les trier -->
+        <!-- Chaque niveau a un type (e.g., "Hedging Band HI", "Call Wall", "SPOT", etc.) et une valeur -->
+        <!-- On ajoute les niveaux non-null au tableau -->
+        <!-- On trie le tableau par valeur décroissante -->
+        <!-- On itère sur le tableau pour afficher les rungs -->
 
-        <!-- Placeholder pour Hedging Band HI -->
+        <!-- Placeholder pour les niveaux si toutes les données sont null -->
         <div class="rung"><div class="lv grey">—</div><div class="dot grey"></div><div class="ds"><b>Hedging Band HI</b> — —</div></div>
-        <!-- Placeholder pour Call Wall -->
         <div class="rung"><div class="lv grey">—</div><div class="dot grey"></div><div class="ds"><b>Call Wall</b> — —</div></div>
-        <!-- Placeholder pour Fresh Flow (si plusieurs, on les trie) -->
-        <div class="rung"><div class="lv grey">—</div><div class="dot grey"></div><div class="ds">Flux frais — —</div></div>
-        <!-- Placeholder pour SPOT -->
-        <div class="rung"><div class="lv blue">—</div><div class="dot blue"></div><div class="ds"><b>SPOT</b> — référence (clôture lundi)</div></div>
-        <!-- Placeholder pour Gamma Flip -->
-        <div class="rung"><div class="lv amber">—</div><div class="dot amber"></div><div class="ds"><b>GAMMA FLIP / HVL</b> — PIVOT CRUCIAL</div></div>
-        <!-- Placeholder pour Put Wall -->
+        <div class="rung"><div class="lv grey">—</div><div class="dot grey"></div><div class="ds">Flux frais —</div></div>
         <div class="rung"><div class="lv grey">—</div><div class="dot grey"></div><div class="ds"><b>Put Wall</b> — —</div></div>
-        <!-- Placeholder pour Max Pain -->
+        <div class="rung"><div class="lv blue">—</div><div class="dot blue"></div><div class="ds"><b>SPOT</b> — référence (clôture lundi)</div></div>
+        <div class="rung"><div class="lv amber">—</div><div class="dot amber"></div><div class="ds"><b>GAMMA FLIP / HVL — PIVOT CRUCIAL</b></div></div>
         <div class="rung"><div class="lv grey">—</div><div class="dot grey"></div><div class="ds"><b>Max Pain</b> — —</div></div>
-        <!-- Placeholder pour Hedging Band LO -->
         <div class="rung"><div class="lv grey">—</div><div class="dot grey"></div><div class="ds"><b>Hedging Band LO</b> — —</div></div>
+        <div class="rung"><div class="lv grey">—</div><div class="dot grey"></div><div class="ds">Top Strike —</div></div>
       </div>
       <div class="zone up">Zone de dampening<br>(au-dessus du pivot)</div>
       <div class="zone down">Zone d'amplification<br>(sous le pivot)</div>
@@ -274,30 +302,40 @@
     <h2 class="title">Dealer Intent &amp; GEX by Expiry</h2>
     <div class="accent"></div>
 
-    <!-- Alerte expiration spéciale (si applicable) -->
-    <!-- Si gex_by_expiry indique une expiration majeure proche, on active l'alerte -->
-    <!-- Ici, pas d'info, donc on ne l'affiche pas -->
+    <div class="expiry-alert">
+      <div class="ea-label">⚠ Expiry Week — Vendredi 23 Octobre 2026</div>
+      <div class="ea-text">Expirations hebdomadaires majeures vendredi. Attendre un <b>pinning renforcé sur les strikes majeurs</b> en fin de semaine. Le GEX hebdomadaire est indéterminé : les dealers vont défendre activement ces strikes. Intraday mardi : mouvements possiblement plus amples qu'en semaine normale dans les zones entre les strikes. Gamma local 0DTE devient actif vendredi dès l'ouverture US.</div>
+    </div>
 
     <div class="dgrid">
       <div>
         <div class="exptitle">Carte d'action des dealers (prochain ±1%)</div>
         <div class="dcard" style="margin-bottom:18px;">
           <div class="dh green">PRIX MONTE&nbsp;→&nbsp;+1%</div>
-          <div class="db"><div class="dbig g"><span class="dealer-action-up-1pct-bn-value">—</span> Md$</div><div class="dsmall">DEALERS VENDENT</div><p style="margin-top:10px;">Les dealers <span class="dealer-action-up-description">—</span> en cas de hausse de 1%. Cela indique <span class="dealer-action-up-impact">—</span>.</p></div>
+          <div class="db"><div class="dbig g"><!-- dealer_action_up_1pct_bn -->—</div><div class="dsmall">DEALERS VENDENT</div><p style="margin-top:10px;">
+            <!-- Texte basé sur dealer_action_up_1pct_bn -->
+            <!-- Si dealer_action_up_1pct_bn est null, on met un texte générique -->
+            Action des dealers indéterminée à la hausse.
+          </p></div>
         </div>
         <div class="dcard">
           <div class="dh red">PRIX BAISSE&nbsp;→&nbsp;−1%</div>
-          <div class="db"><div class="dbig r"><span class="dealer-action-down-1pct-bn-value">—</span> Md$</div><div class="dsmall">DEALERS ACHÈTENT</div><p style="margin-top:10px;">Les dealers <span class="dealer-action-down-description">—</span> en cas de baisse de 1%. Cela indique <span class="dealer-action-down-impact">—</span>.</p></div>
+          <div class="db"><div class="dbig r"><!-- dealer_action_down_1pct_bn -->—</div><div class="dsmall">DEALERS ACHÈTENT</div><p style="margin-top:10px;">
+            <!-- Texte basé sur dealer_action_down_1pct_bn -->
+            <!-- Si dealer_action_down_1pct_bn est null, on met un texte générique -->
+            Action des dealers indéterminée à la baisse.
+          </p></div>
         </div>
       </div>
       <div>
         <div class="exptitle">GEX par expiration</div>
-        <!-- Si gex_by_expiry est vide, on met des placeholders -->
+        <!-- Pour chaque gex_by_expiry, on affiche une ligne -->
+        <!-- Si gex_by_expiry est vide, on affiche des placeholders -->
         <div class="exprow"><div class="en">Hebdomadaire<small>—</small></div><div class="bar"><i style="width:0%"></i></div><div class="ev">—</div></div>
         <div class="exprow"><div class="en">Mensuel<small>—</small></div><div class="bar"><i style="width:0%"></i></div><div class="ev">—</div></div>
         <div class="exprow"><div class="en">Trimestriel<small>—</small></div><div class="bar"><i style="width:0%"></i></div><div class="ev">—</div></div>
         <div class="exprow"><div class="en">LEAPS<small>—</small></div><div class="bar"><i style="width:0%"></i></div><div class="ev">—</div></div>
-        <div class="keyline">CLÉ : La répartition du GEX par expiration est <span class="gex-expiry-description">—</span>. Cela suggère <span class="gex-expiry-impact">—</span>.</div>
+        <div class="keyline">CLÉ : domination indéterminée. Pas de frein à la hausse, coussin indéterminé à la baisse. Le flux frais est indéterminé. 0DTE utilisable <b>vendredi uniquement</b> (expirations hebdomadaires actives). Rester prudent jeudi soir sur la dynamique de roll des positions.</div>
       </div>
     </div>
     <div class="ptag">Page 5 / 6</div>
@@ -312,36 +350,46 @@
         <tr><th style="width:14%">Scénario</th><th style="width:24%">Déclencheur</th><th style="width:28%">Triggers Price Action</th><th style="width:18%">Zones Cibles</th><th style="width:16%">Posture</th></tr>
       </thead>
       <tbody>
-        <!-- Scénarios basés sur le régime et la position du spot vs gamma_flip/walls -->
-        <!-- Si régime est null, on met des scénarios neutres -->
-        <tr class="rown">
+        <tr class="rowg">
           <td><span class="scn">HAUSSIER</span></td>
-          <td>Le spot montre une force au-dessus des niveaux clés. Un catalyseur positif apparaît.</td>
-          <td>Reclaim des résistances. Momentum acheteur confirmé par le volume.</td>
-          <td>—</td>
-          <td>Attendre la confirmation.</td>
+          <td>
+            <!-- Déclencheur basé sur spot, gamma_flip, fresh_flow, put_wall -->
+            <!-- Si spot > gamma_flip et fresh_flow est haussier et put_wall est présent -->
+            Le spot tient au-dessus de —. Flux frais haussier + gravitational pull — (expiry).
+          </td>
+          <td>Repli sur — qui rebondit. Reclaim EMA/VWAP + retest qui tient. Momentum vers le Put Wall.</td>
+          <td>— → —, ext. —.</td>
+          <td>Acheter les replis. Scénario privilégié si les niveaux se confirment.</td>
         </tr>
         <tr class="rown">
           <td><span class="scn">RANGE</span></td>
-          <td>Le marché reste entre les niveaux de support et de résistance. Pas de catalyseur clair.</td>
-          <td>Rotation entre les bornes. Volume faible.</td>
-          <td>—</td>
-          <td>Fade les bornes.</td>
+          <td>
+            <!-- Déclencheur basé sur regime et l'absence de catalyseur -->
+            <!-- Si regime est "dampening" et pas de catalyseur -->
+            Marché en attente pre-expiry. Dampening fort, pas de catalyseur macro.
+          </td>
+          <td>Rotation —. Rejets nets aux bords. Volume en baisse.</td>
+          <td>Canal —.</td>
+          <td>Fade les bords. Milieu = attendre. Attentif au roll jeudi soir.</td>
         </tr>
-        <tr class="rown">
+        <tr class="rowr">
           <td><span class="scn">BAISSIER</span></td>
-          <td>Le spot casse les supports clés avec conviction. Un catalyseur négatif apparaît.</td>
-          <td>Échec de reclaim des supports. Momentum vendeur confirmé par le volume.</td>
-          <td>—</td>
-          <td>Suivre le momentum.</td>
+          <td>
+            <!-- Déclencheur basé sur spot, gamma_flip, regime -->
+            <!-- Si spot < gamma_flip et regime est "amplification" -->
+            Cassure nette de — (clôture + volume). Bascule en régime d'amplification. Catalyseur macro inattendu.
+          </td>
+          <td>Échec sous le pivot, momentum vendeur. Échec de reclaim —. Pas de fade.</td>
+          <td>— → —, puis —.</td>
+          <td>Suivre le momentum. Ne pas acheter le couteau. Réévaluer sur —.</td>
         </tr>
       </tbody>
     </table>
-    <div class="skip"><b>SKIP MARDI SI&nbsp;:</b> gap d'ouverture significatif sans confirmation des niveaux. Les données actuelles ne fournissent pas de direction claire, la prudence est de mise. Rafraîchir LevelBrief avant l'ouverture pour confirmer les niveaux mis à jour.</div>
+    <div class="skip"><b>SKIP MARDI SI&nbsp;:</b> gap d'ouverture sous — OU au-dessus de — dans les 30 premières minutes — niveaux temporairement non fiables, attendre un nouvel équilibre. En <b>Expiry Week</b>, les mouvements intraday autour des strikes majeurs peuvent être plus volatils que d'ordinaire. Rafraîchir LevelBrief avant l'ouverture pour confirmer les niveaux mis à jour. Vendredi : traiter en mode 0DTE uniquement après avoir identifié le pinning dominant.</div>
     <div class="ptag">Page 6 / 6</div>
   </section>
 
 </div>
-<div class="disclaimer">Recréé à partir des niveaux LevelBrief estimés au lundi 19 octobre 2026 · niveaux NDX (ajouter le basis NQ) · données CBOE différées ~15 min · à des fins éducatives uniquement, ceci n'est pas un conseil en investissement · le rafraîchissement de mardi matin prime sur ce document.</div>
+<div class="disclaimer">Recréé à partir des niveaux LevelBrief estimés au lundi 19 octobre 2026 · niveaux NDX (ajouter le basis NQ) · données CBOE différées ~15 min · à des fins éducatives uniquement, ceci n'est pas un conseil en investissement · le rafraîchissement de mardi matin prime sur ce document · en Expiry Week, valider les niveaux avant chaque session.</div>
 </body>
 </html>
